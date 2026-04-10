@@ -6,7 +6,7 @@
 
 ## MODELO: HÍBRIDO
 - **Home:** one-page com âncoras de navegação
-- **Páginas próprias:** Quartos · Atrações · Blog · Contato
+- **Páginas próprias:** Quartos · Atrações · FAQ · Grupos · Blog · Contato
 
 ---
 
@@ -20,11 +20,12 @@ lagoaparkhotel.com.br/
 │   ├── #quartos         → Preview das acomodações
 │   ├── #localizacao     → Mapa + entorno
 │   ├── #avaliacoes      → Reviews de hóspedes
-│   ├── #faq             → Dúvidas frequentes
 │   └── #reservar        → CTA final
 │
 ├── /quartos             → Acomodações (detalhe completo)
 ├── /atracoes            → Atrações turísticas de João Pessoa
+├── /faq                 → Dúvidas frequentes
+├── /grupos              → Cotação para grupos e eventos
 ├── /blog                → Blog do hotel
 └── /contato             → Contato e formulário
 ```
@@ -38,7 +39,7 @@ Esses elementos aparecem em TODAS as páginas.
 ### HEADER (fixo — sempre visível ao rolar)
 
 ```
-[ Logo ]    [ Home · Quartos · Atrações · Blog · Contato ]    [ WhatsApp ]  [ RESERVAR → ]
+[ Logo ]    [ Home · Quartos · Atrações · FAQ · Blog · Contato ]    [ WhatsApp ]  [ RESERVAR → ]
 ```
 
 **Comportamento:**
@@ -63,6 +64,7 @@ Esses elementos aparecem em TODAS as páginas.
 - Quartos
 - Como Chegar
 - Atrações
+- Dúvidas Frequentes
 - Blog
 - Contato
 - Reservar (Foco Multimídia)
@@ -182,6 +184,7 @@ Esses elementos aparecem em TODAS as páginas.
 **Objetivo:** Mostrar que a localização é um diferencial real, não um detalhe.
 
 ```
+DESKTOP
 ┌─────────────────────────────────────────────────────┐
 │  TÍTULO DA SEÇÃO                                    │
 │                                                     │
@@ -193,7 +196,17 @@ Esses elementos aparecem em TODAS as páginas.
 │  │                     │  │ Centro Hist 10 min   │  │
 │  └─────────────────────┘  └─────────────────────┘  │
 │                                                     │
-│         [ Uber ]  [ Waze ]  [ Google Maps ]         │
+│                  [ Google Maps ]                    │
+└─────────────────────────────────────────────────────┘
+
+MOBILE (apenas)
+┌─────────────────────────────────────────────────────┐
+│  [MAPA INTERATIVO — largura total]                  │
+│                                                     │
+│  Aeroporto   20 min                                 │
+│  Rodoviária  10 min  ...                            │
+│                                                     │
+│   [ 🚗 Uber ]   [ 🔵 Waze ]   [ 🗺 Google Maps ]   │
 └─────────────────────────────────────────────────────┘
 ```
 
@@ -203,12 +216,26 @@ Esses elementos aparecem em TODAS as páginas.
 - Marcador: logo do hotel
 - Zoom inicial: 16
 - Lista de distâncias em minutos
-- 3 botões de navegação: Uber · Waze · Google Maps (cada um abre o app correspondente)
+
+**Botões de navegação:**
+
+| Botão       | Visível em       |
+| ----------- | ---------------- |
+| Google Maps | Desktop + Mobile |
+| Waze        | Somente Mobile   |
+| Uber        | Somente Mobile   |
+
+**Links:**
+
+- **Google Maps:** `https://maps.google.com/?q=-7.1199157,-34.8817816`
+- **Waze:** `https://waze.com/ul?ll=-7.1199157,-34.8817816`
+- **Uber:** `https://m.uber.com/ul/?action=setPickup&client_id=Fw0uh3oyw_6K9hSqYWdXlm2D-NnGg7D_&pickup=my_location&dropoff[latitude]=-7.1199157&dropoff[longitude]=-34.8817816&dropoff[nickname]=Lagoa%20Park%20Hotel&dropoff[formatted_address]=Parque%20S%C3%B3lon%20de%20Lucena%2C%2019%20-%20Centro%2C%20Jo%C3%A3o%20Pessoa%20-%20PB%2C%2058013-131%2C%20Brasil`
 
 **Interações:**
 - Mapa: scroll para zoom, arrastar para mover
-- Botões de app: abrem o aplicativo no celular ou a versão web no desktop
-- Em mobile: mapa ocupa largura total, lista de distâncias fica abaixo
+- Botões Waze e Uber: visíveis apenas em mobile (`display: none` no desktop, `display: flex` abaixo de 640px)
+- Google Maps: visível em todas as telas
+- Em mobile: mapa ocupa largura total, lista de distâncias e botões ficam abaixo
 
 ---
 
@@ -244,37 +271,7 @@ Esses elementos aparecem em TODAS as páginas.
 
 ---
 
-### SEÇÃO 6 — FAQ `#faq`
-
-**Objetivo:** Eliminar as objeções que impedem a reserva.
-
-```
-┌─────────────────────────────────────────────────────┐
-│              TÍTULO DA SEÇÃO                        │
-│                                                     │
-│  ▶  Pergunta 1                                      │
-│  ─────────────────────────────────────────────────  │
-│  ▶  Pergunta 2                                      │
-│  ─────────────────────────────────────────────────  │
-│  ▶  Pergunta 3                                      │
-│  ─────────────────────────────────────────────────  │
-└─────────────────────────────────────────────────────┘
-```
-
-**Organização das perguntas (grupos):**
-1. Reservas (cancelamento, antecipação, cupom)
-2. Apartamentos (quarto de frente, barulho, frigobar, secador)
-3. Estacionamento (regras por dia e horário)
-4. Check-in e check-out (horários, chegada de madrugada)
-
-**Interações:**
-- Accordion: clique na pergunta abre/fecha a resposta com animação suave
-- Somente uma resposta aberta por vez
-- Ícone rotaciona 90° ao abrir (▶ vira ▼)
-
----
-
-### SEÇÃO 7 — CTA FINAL `#reservar`
+### SEÇÃO 6 — CTA FINAL `#reservar`
 
 **Objetivo:** Converter quem chegou até o fim da página sem ter reservado ainda.
 
@@ -350,6 +347,93 @@ Esses elementos aparecem em TODAS as páginas.
 **Interações:**
 - Cards: hover revela overlay com descrição completa
 - Em mobile: cards em coluna, descrição sempre visível
+
+---
+
+## PÁGINA: FAQ `/faq`
+
+**Objetivo:** Responder as dúvidas que impedem a reserva e reduzir o volume de contatos repetitivos.
+
+```
+┌─────────────────────────────────────────────────────┐
+│  HERO DA PÁGINA (título + subtítulo)                │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│  GRUPO 1 — Reservas                                 │
+│  ▶  Pergunta 1                                      │
+│  ─────────────────────────────────────────────────  │
+│  ▶  Pergunta 2 ...                                  │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│  GRUPO 2 — Apartamentos                             │
+│  ▶  Pergunta 1 ...                                  │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│  GRUPO 3 — Estacionamento                           │
+│  ▶  Pergunta 1 ...                                  │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│  GRUPO 4 — Check-in e Check-out                     │
+│  ▶  Pergunta 1 ...                                  │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│  Ainda com dúvidas? → [ Falar pelo WhatsApp ]       │
+└─────────────────────────────────────────────────────┘
+```
+
+**Organização dos grupos:**
+
+1. **Reservas** — cancelamento, antecipação, cupom, reembolso
+2. **Apartamentos** — quarto de frente, barulho, frigobar, secador, capacidade
+3. **Estacionamento** — regras por dia e horário, apoio da recepção
+4. **Check-in e Check-out** — horários, chegada de madrugada, saída antecipada
+
+**Interações:**
+
+- Accordion: clique na pergunta abre/fecha a resposta com animação suave
+- Múltiplas respostas podem ficar abertas simultaneamente (diferente do accordion da home)
+- Ícone rotaciona 90° ao abrir (▶ vira ▼)
+- Âncoras por grupo: `/faq#reservas`, `/faq#apartamentos`, `/faq#estacionamento`, `/faq#checkin`
+- Botão final: abre WhatsApp com mensagem pré-preenchida
+
+---
+
+## PÁGINA: GRUPOS `/grupos`
+
+**Objetivo:** Capturar solicitações de cotação para grupos, eventos corporativos e reservas coletivas.
+
+```
+┌─────────────────────────────────────────────────────┐
+│  HERO DA PÁGINA (título + subtítulo)                │
+└─────────────────────────────────────────────────────┘
+
+┌─────────────────────────────────────────────────────┐
+│  FORMULÁRIO DE COTAÇÃO (Kommo/amoCRM)               │
+│  Script externo — carregado via tag <script>        │
+│  ID do formulário: 1678696                          │
+└─────────────────────────────────────────────────────┘
+```
+
+**Conteúdo:**
+- Hero com título e subtítulo definidos na etapa de copy
+- Formulário gerenciado externamente pela plataforma Kommo
+- O script é carregado de forma assíncrona (`async`) — não impacta a performance da página
+
+**Interações:**
+- Formulário inteiramente controlado pelo Kommo — sem lógica própria no site
+- Após envio: comportamento definido pela configuração do formulário no Kommo
+
+**Nota técnica:**
+```html
+<!-- Scripts do formulário Kommo — inserir antes do </body> -->
+<script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1678696",hash:"e4747e77d6aedd294d2c6d9e401cdad5",locale:"pt"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script>
+<script id="amoforms_script_1678696" async="async" charset="utf-8" src="https://forms.kommo.com/forms/assets/js/amoforms.js?1775764539"></script>
+```
 
 ---
 

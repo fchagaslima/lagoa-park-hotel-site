@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lagoa Park Hotel — No centro de João Pessoa. Em frente à Lagoa.</title>
+  <meta name="description" content="38 apartamentos no coração de João Pessoa, em frente à Lagoa Sólon de Lucena. Wi-Fi rápido, café da manhã incluso e check-in descomplicado." />
+  <link rel="canonical" href="https://www.lagoaparkhotel.com.br/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Lagoa Park Hotel — No centro de João Pessoa. Em frente à Lagoa." />
+  <meta property="og:description" content="38 apartamentos no coração de João Pessoa, em frente à Lagoa Sólon de Lucena." />
+  <meta property="og:url"         content="https://www.lagoaparkhotel.com.br/" />
+  <meta property="og:image"       content="https://www.lagoaparkhotel.com.br/assets/img/hero/hero-lagoa.webp" />
+  <meta property="og:locale"      content="pt_BR" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Lagoa Park Hotel — João Pessoa" />
+  <meta name="twitter:description" content="38 apartamentos em frente à Lagoa Sólon de Lucena." />
+  <meta name="twitter:image"       content="https://www.lagoaparkhotel.com.br/assets/img/hero/hero-lagoa.webp" />
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonte: Outfit -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN (substituir por build compilado em produção) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:      '#1B2F5E',
+            offwhite:  '#F5F3EE',
+            terracota: '#C0603A',
+            surface:   '#FAFAF8',
+            muted:     '#6B7280',
+            border:    '#E5E7EB',
+            text:      '#2D3748',
+            sand:      '#E8DDD0',
+          },
+          fontFamily: {
+            sans:    ['Outfit', 'system-ui', 'sans-serif'],
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- CSS crítico inline -->
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Hero overlay navy */
+    .hero-overlay {
+      background: linear-gradient(
+        to bottom,
+        rgba(27,47,94,0.55) 0%,
+        rgba(27,47,94,0.72) 100%
+      );
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Reviews: swipe mobile */
+    .reviews-track {
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .reviews-track::-webkit-scrollbar { display: none; }
+    .review-card { scroll-snap-align: start; }
+
+    /* Drawer */
+    #drawer          { transition: transform 0.25s ease; }
+    #drawer-overlay  { transition: opacity 0.2s ease; }
+
+    /* Mapa */
+    #map { z-index: 1; }
+
+    /* ── Design v2: Tipografia editorial ── */
+
+    /* Stagger delays para reveals encadeados */
+    .reveal-d1 { transition-delay:  80ms; }
+    .reveal-d2 { transition-delay: 160ms; }
+    .reveal-d3 { transition-delay: 240ms; }
+    .reveal-d4 { transition-delay: 320ms; }
+    .reveal-d5 { transition-delay: 400ms; }
+
+    /* Padrão de linhas diagonais sutis — textura editorial */
+    .texture-lines {
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 5px,
+        rgba(27,47,94,0.018) 5px,
+        rgba(27,47,94,0.018) 6px
+      );
+    }
+  </style>
+
+  <!-- Favicon (substituir pelos arquivos reais) -->
+  <link rel="icon"             href="/assets/img/logo/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/img/logo/apple-touch-icon.png" />
+
+  <!-- Schema.org: Hotel -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "Lagoa Park Hotel",
+    "description": "Hotel econômico urbano em frente à Lagoa do Parque Sólon de Lucena, no centro de João Pessoa. 38 apartamentos com Wi-Fi, ar-condicionado, frigobar e café da manhã incluso.",
+    "url": "https://www.lagoaparkhotel.com.br",
+    "telephone": "+558330151414",
+    "email": "contato@lagoaparkhotel.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Parque Sólon de Lucena, 19",
+      "addressLocality": "João Pessoa",
+      "addressRegion": "PB",
+      "postalCode": "58013-131",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -7.1199157,
+      "longitude": -34.8817816
+    },
+    "numberOfRooms": 38,
+    "checkinTime": "14:00",
+    "checkoutTime": "12:00",
+    "priceRange": "$$",
+    "image": "https://www.lagoaparkhotel.com.br/assets/img/hero/hero-lagoa.webp",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuito",      "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Café da manhã incluso","value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Ar-condicionado",      "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Recepção 24 horas",    "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "TV",                   "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Frigobar",             "value": true }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/lagoaparkhotel",
+      "https://www.instagram.com/lagoaparkhotel"
+    ]
+  }
+  </script>
+</head>
+
+<body class="bg-offwhite font-sans text-text antialiased">
+
+<!-- ═══════════════════════════════════════════════ HEADER ══ -->
+<header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-navy transition-shadow duration-200">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="/" aria-label="Lagoa Park Hotel — Página inicial" class="flex-shrink-0">
+      <!-- SUBSTITUIR pela tag <img> do logo real quando disponível -->
+      <span class="text-offwhite font-semibold text-lg tracking-wide">Lagoa Park Hotel</span>
+    </a>
+
+    <!-- Nav Desktop -->
+    <nav class="hidden lg:flex items-center gap-8" aria-label="Menu principal">
+      <a href="#inicio"    class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Home</a>
+      <a href="/quartos"   class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Quartos</a>
+      <a href="/atracoes"  class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Atrações</a>
+      <a href="/faq"       class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">FAQ</a>
+      <a href="/blog"      class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Blog</a>
+      <a href="/contato"   class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Contato</a>
+    </nav>
+
+    <!-- CTA Desktop -->
+    <div class="hidden lg:flex items-center gap-4">
+      <a href="https://wa.me/558330151414?text=Ol%C3%A1%21+Gostaria+de+informa%C3%A7%C3%B5es+sobre+hospedagem+no+Lagoa+Park+Hotel."
+         target="_blank" rel="noopener"
+         aria-label="WhatsApp"
+         id="cta-whatsapp-header" data-gtm-id="cta-whatsapp-header"
+         class="text-offwhite/70 hover:text-offwhite transition-colors">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+      </a>
+      <a href="#"
+         id="cta-reservar-header" data-gtm-id="cta-reservar-header"
+         class="bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase px-5 py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+        Reservar
+      </a>
+    </div>
+
+    <!-- Hambúrguer Mobile -->
+    <button id="btn-menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer"
+            class="lg:hidden text-offwhite p-2 -mr-2">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6"  x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<!-- Drawer Mobile -->
+<div id="drawer-overlay" class="fixed inset-0 bg-navy/60 z-40 opacity-0 pointer-events-none" aria-hidden="true"></div>
+<nav id="drawer" role="dialog" aria-label="Menu mobile"
+     class="fixed top-0 right-0 h-full w-72 bg-navy z-50 transform translate-x-full flex flex-col pt-20 px-8 gap-5">
+  <button id="btn-close" aria-label="Fechar menu"
+          class="absolute top-4 right-4 text-offwhite p-2">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+      <line x1="18" y1="6" x2="6"  y2="18"/>
+      <line x1="6"  y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+  <a href="#inicio"   class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Home</a>
+  <a href="/quartos"  class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Quartos</a>
+  <a href="/atracoes" class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Atrações</a>
+  <a href="/faq"      class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">FAQ</a>
+  <a href="/blog"     class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Blog</a>
+  <a href="/contato"  class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Contato</a>
+  <a href="#"
+     id="cta-reservar-drawer" data-gtm-id="cta-reservar-drawer"
+     class="mt-4 bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center px-5 py-4 rounded-sm hover:bg-terracota/90 transition-colors">
+    Reservar
+  </a>
+</nav>
+
+<main>
+
+  <!-- ════════════════════════════════════════════ HERO ══ -->
+  <section id="inicio" class="relative h-screen min-h-[600px] flex flex-col justify-center items-center text-center overflow-hidden">
+
+    <!-- Foto de fundo -->
+    <img
+      src="/assets/img/hero/hero-lagoa.webp"
+      alt="Vista aérea da Lagoa do Parque Sólon de Lucena ao entardecer, com a fachada do Lagoa Park Hotel ao fundo"
+      class="absolute inset-0 w-full h-full object-cover object-center"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <!-- Overlay -->
+    <div class="hero-overlay absolute inset-0" aria-hidden="true"></div>
+
+    <!-- Conteúdo -->
+    <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+      <p class="text-offwhite/60 text-xs font-medium tracking-[0.25em] uppercase mb-5">João Pessoa · Paraíba · Brasil</p>
+
+      <h1 class="font-display text-offwhite text-5xl sm:text-6xl lg:text-[4.5rem] font-light italic leading-tight tracking-normal mb-5">
+        No centro de João Pessoa.<br>Em frente à Lagoa.
+      </h1>
+
+      <p class="text-offwhite/75 text-base sm:text-lg font-light tracking-wide mb-10">
+        38 apartamentos · Wi-Fi 200 Mbps · Check-in às 14h
+      </p>
+
+      <!-- Formulário de reserva -->
+      <form id="form-reserva" novalidate
+            class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-sm p-4 sm:p-2
+                   flex flex-col sm:flex-row gap-3 sm:gap-0 sm:items-stretch max-w-2xl mx-auto">
+
+        <div class="flex-1 sm:border-r border-white/25 px-4 py-2">
+          <label for="checkin" class="block text-offwhite/55 text-[10px] font-medium tracking-widest uppercase mb-1">Check-in</label>
+          <input type="date" id="checkin" name="checkin" required
+                 class="w-full bg-transparent text-offwhite text-sm focus:outline-none"
+                 aria-label="Data de check-in" />
+        </div>
+
+        <div class="flex-1 sm:border-r border-white/25 px-4 py-2">
+          <label for="checkout" class="block text-offwhite/55 text-[10px] font-medium tracking-widest uppercase mb-1">Check-out</label>
+          <input type="date" id="checkout" name="checkout" required
+                 class="w-full bg-transparent text-offwhite text-sm focus:outline-none"
+                 aria-label="Data de check-out" />
+        </div>
+
+        <div class="flex-1 sm:border-r border-white/25 px-4 py-2">
+          <label for="adultos" class="block text-offwhite/55 text-[10px] font-medium tracking-widest uppercase mb-1">Adultos</label>
+          <select id="adultos" name="adultos"
+                  class="w-full bg-transparent text-offwhite text-sm focus:outline-none appearance-none"
+                  aria-label="Número de adultos">
+            <option value="1" class="text-text bg-navy">1</option>
+            <option value="2" class="text-text bg-navy" selected>2</option>
+            <option value="3" class="text-text bg-navy">3</option>
+            <option value="4" class="text-text bg-navy">4+</option>
+          </select>
+        </div>
+
+        <button type="submit"
+                id="cta-reservar-hero" data-gtm-id="cta-reservar-hero"
+                class="sm:ml-2 flex-shrink-0 bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase
+                       px-7 py-4 rounded-sm hover:bg-terracota/90 transition-colors whitespace-nowrap">
+          Ver disponibilidade
+        </button>
+      </form>
+      <p id="form-error" role="alert" class="text-red-300 text-xs mt-2 hidden">
+        Informe as datas de check-in e check-out.
+      </p>
+    </div>
+
+    <!-- Scroll cue -->
+    <div class="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-offwhite/35" aria-hidden="true">
+      <span class="text-[10px] tracking-widest uppercase">Saiba mais</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════ NÚMEROS ══ -->
+  <div class="bg-navy border-t border-white/10 py-12 lg:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+        <div>
+          <p class="font-display text-offwhite text-5xl lg:text-6xl font-light italic leading-none">38</p>
+          <p class="text-offwhite/40 text-[0.6rem] tracking-[0.22em] uppercase mt-3">apartamentos</p>
+        </div>
+        <div>
+          <p class="font-display text-offwhite text-5xl lg:text-6xl font-light italic leading-none">200</p>
+          <p class="text-offwhite/40 text-[0.6rem] tracking-[0.22em] uppercase mt-3">Mbps Wi-Fi</p>
+        </div>
+        <div>
+          <p class="font-display text-offwhite text-5xl lg:text-6xl font-light italic leading-none">30</p>
+          <p class="text-offwhite/40 text-[0.6rem] tracking-[0.22em] uppercase mt-3">metros da Lagoa</p>
+        </div>
+        <div>
+          <p class="font-display text-offwhite text-5xl lg:text-6xl font-light italic leading-none">14<span class="text-4xl lg:text-5xl">h</span></p>
+          <p class="text-offwhite/40 text-[0.6rem] tracking-[0.22em] uppercase mt-3">check-in</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ DIFERENCIAIS ══ -->
+  <section id="diferenciais" class="py-20 lg:py-28 bg-offwhite texture-lines">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Título editorial — alinhado à esquerda, misturando italic e peso forte -->
+      <div class="mb-14 reveal">
+        <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-5xl font-light italic leading-snug">
+          Tudo que você precisa.<br>
+          <span class="not-italic font-semibold">Nada que você não pediu.</span>
+        </h2>
+      </div>
+
+      <!-- Layout editorial: âncora (localização) | divisor | lista de features -->
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1px_1fr] gap-10 lg:gap-0 items-start">
+
+        <!-- ① Âncora: Localização — diferencial principal -->
+        <div class="reveal lg:pr-14">
+          <div class="border-l-2 border-terracota pl-7">
+            <p class="text-terracota text-[0.6rem] font-medium tracking-[0.22em] uppercase mb-5">Diferencial principal</p>
+            <h3 class="font-display text-navy text-2xl lg:text-3xl font-light italic leading-snug mb-4">
+              Em frente à<br>Lagoa Sólon de Lucena
+            </h3>
+            <p class="text-muted text-sm leading-relaxed mb-6">
+              A 30 metros do principal cartão-postal de João Pessoa. No coração da cidade, a pé de tudo que importa.
+            </p>
+            <p class="text-navy/25 text-[0.65rem] font-mono tracking-wider">−7.1199° S · −34.8817° O</p>
+          </div>
+        </div>
+
+        <!-- Divisor vertical (desktop) -->
+        <div class="hidden lg:block self-stretch">
+          <div class="bg-gradient-to-b from-transparent via-border to-transparent" style="width:1px;height:100%;margin:0 auto;"></div>
+        </div>
+
+        <!-- ② Demais diferenciais como lista editorial -->
+        <div class="lg:pl-14 flex flex-col">
+
+          <div class="reveal reveal-d1 flex items-start gap-4 py-4 border-b border-border/50">
+            <div class="w-5 h-5 mt-0.5 flex-shrink-0 text-terracota" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+                <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+                <line x1="12" y1="20" x2="12.01" y2="20"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-navy text-sm font-medium mb-0.5">Wi-Fi 200 Mbps</h3>
+              <p class="text-muted text-xs leading-relaxed">Reunião por vídeo, trabalho remoto ou streaming — sem interrupção.</p>
+            </div>
+          </div>
+
+          <div class="reveal reveal-d2 flex items-start gap-4 py-4 border-b border-border/50">
+            <div class="w-5 h-5 mt-0.5 flex-shrink-0 text-terracota" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="12" y1="1" x2="12" y2="23"/>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-navy text-sm font-medium mb-0.5">Preço justo</h3>
+              <p class="text-muted text-xs leading-relaxed">Pela melhor localização do centro de João Pessoa — sem pagar por estrelas que você não usa.</p>
+            </div>
+          </div>
+
+          <div class="reveal reveal-d3 flex items-start gap-4 py-4 border-b border-border/50">
+            <div class="w-5 h-5 mt-0.5 flex-shrink-0 text-terracota" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+                <line x1="6"  y1="1" x2="6"  y2="4"/>
+                <line x1="10" y1="1" x2="10" y2="4"/>
+                <line x1="14" y1="1" x2="14" y2="4"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-navy text-sm font-medium mb-0.5">Café da manhã incluso</h3>
+              <p class="text-muted text-xs leading-relaxed">Buffet variado todas as manhãs — boa primeira parada antes de explorar a cidade.</p>
+            </div>
+          </div>
+
+          <div class="reveal reveal-d4 flex items-start gap-4 py-4 border-b border-border/50">
+            <div class="w-5 h-5 mt-0.5 flex-shrink-0 text-terracota" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-navy text-sm font-medium mb-0.5">Equipe que acolhe</h3>
+              <p class="text-muted text-xs leading-relaxed">Recepção presente e atenciosa. Quem se hospeda uma vez, volta pelo atendimento.</p>
+            </div>
+          </div>
+
+          <div class="reveal reveal-d5 flex items-start gap-4 py-4">
+            <div class="w-5 h-5 mt-0.5 flex-shrink-0 text-terracota" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="text-navy text-sm font-medium mb-0.5">Recepção disponível</h3>
+              <p class="text-muted text-xs leading-relaxed">Chegou depois de um dia longo? A recepção está no lugar para receber você.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════ QUARTOS ══ -->
+  <section id="quartos" class="py-20 lg:py-28 bg-surface">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-3">Acomodações</p>
+        <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-5xl font-light italic tracking-normal">Escolha o seu apartamento</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+
+        <!-- Individual -->
+        <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+          <div class="aspect-[4/3] overflow-hidden bg-navy/10">
+            <img src="/assets/img/quartos/individual.webp"
+                 alt="Quarto Individual do Lagoa Park Hotel — cama de casal, ar-condicionado e mesa de trabalho"
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 loading="lazy" decoding="async" width="400" height="300" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-baseline justify-between mb-3">
+              <h3 class="text-navy text-lg font-medium">Individual</h3>
+              <span class="text-muted text-xs tracking-wide">21 m² · 1 hóspede</span>
+            </div>
+            <ul class="text-muted text-sm space-y-1.5 mb-6">
+              <li class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Ar-condicionado
+              </li>
+              <li class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Wi-Fi incluído
+              </li>
+              <li class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Mesa de trabalho
+              </li>
+            </ul>
+            <a href="#"
+               id="cta-reservar-individual" data-gtm-id="cta-reservar-individual" data-gtm-quarto="individual"
+               class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+              Reservar
+            </a>
+          </div>
+        </article>
+
+        <!-- Casal / Duplo -->
+        <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+          <div class="aspect-[4/3] overflow-hidden bg-navy/10">
+            <img src="/assets/img/quartos/casal.webp"
+                 alt="Quarto Casal do Lagoa Park Hotel — cama de casal, ar-condicionado e frigobar"
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 loading="lazy" decoding="async" width="400" height="300" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-baseline justify-between mb-3">
+              <h3 class="text-navy text-lg font-medium">Casal / Duplo</h3>
+              <span class="text-muted text-xs tracking-wide">21 m² · 2 hóspedes</span>
+            </div>
+            <ul class="text-muted text-sm space-y-1.5 mb-6">
+              <li class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Cama casal ou dupla
+              </li>
+              <li class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Ar-condicionado + Frigobar
+              </li>
+              <li class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                TV canal aberto
+              </li>
+            </ul>
+            <a href="#"
+               id="cta-reservar-casal" data-gtm-id="cta-reservar-casal" data-gtm-quarto="casal"
+               class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+              Reservar
+            </a>
+          </div>
+        </article>
+
+        <!-- Triplo -->
+        <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+          <div class="aspect-[4/3] overflow-hidden bg-navy/10">
+            <img src="/assets/img/quartos/triplo.webp"
+                 alt="Quarto Triplo do Lagoa Park Hotel — três camas, ideal para grupos e famílias"
+                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                 loading="lazy" decoding="async" width="400" height="300" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-baseline justify-between mb-3">
+              <h3 class="text-navy text-lg font-medium">Triplo</h3>
+              <span class="text-muted text-xs tracking-wide">21 m² · até 3 hóspedes</span>
+            </div>
+            <ul class="text-muted text-sm space-y-1.5 mb-6">
+              <li class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                3 camas solteiro ou casal + solteiro
+              </li>
+              <li class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Ar-condicionado + Frigobar
+              </li>
+              <li class="flex items-center gap-2">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                TV canal aberto
+              </li>
+            </ul>
+            <a href="#"
+               id="cta-reservar-triplo" data-gtm-id="cta-reservar-triplo" data-gtm-quarto="triplo"
+               class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+              Reservar
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="text-center mt-12 reveal">
+        <a href="/quartos" class="inline-flex items-center gap-2 text-navy text-sm font-medium border-b border-navy/30 hover:border-navy pb-0.5 transition-colors">
+          Ver todos os apartamentos
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ LOCALIZAÇÃO ══ -->
+  <section id="localizacao" class="py-20 lg:py-28 bg-offwhite">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-16 reveal">
+        <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-3">Localização</p>
+        <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-5xl font-light italic tracking-normal">No coração de João Pessoa</h2>
+        <p class="text-muted text-sm mt-3">Parque Sólon de Lucena, 19 · Centro · João Pessoa – PB</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+
+        <!-- Mapa -->
+        <div class="reveal rounded-sm overflow-hidden border border-border shadow-sm" style="height:360px;">
+          <div id="map" class="w-full h-full bg-navy/5 flex items-center justify-center">
+            <span class="text-muted text-sm">Carregando mapa…</span>
+          </div>
+        </div>
+
+        <!-- Distâncias + botões -->
+        <div class="reveal flex flex-col gap-6">
+          <ul class="divide-y divide-border" aria-label="Distâncias a partir do hotel">
+            <li class="flex items-center justify-between py-3">
+              <span class="text-text text-sm">Aeroporto Internacional</span>
+              <span class="text-navy text-sm font-medium tabular-nums">20 min</span>
+            </li>
+            <li class="flex items-center justify-between py-3">
+              <span class="text-text text-sm">Rodoviária</span>
+              <span class="text-navy text-sm font-medium tabular-nums">10 min</span>
+            </li>
+            <li class="flex items-center justify-between py-3">
+              <span class="text-text text-sm">Lagoa Sólon de Lucena</span>
+              <span class="text-navy text-sm font-medium tabular-nums">5 min a pé</span>
+            </li>
+            <li class="flex items-center justify-between py-3">
+              <span class="text-text text-sm">Praia de Tambaú</span>
+              <span class="text-navy text-sm font-medium tabular-nums">15 min</span>
+            </li>
+            <li class="flex items-center justify-between py-3">
+              <span class="text-text text-sm">Centro Histórico</span>
+              <span class="text-navy text-sm font-medium tabular-nums">10 min</span>
+            </li>
+          </ul>
+
+          <!-- Google Maps (desktop + mobile) -->
+          <a href="https://maps.google.com/?q=-7.1199157,-34.8817816"
+             target="_blank" rel="noopener"
+             id="cta-googlemaps" data-gtm-id="cta-googlemaps"
+             class="inline-flex items-center justify-center gap-2 border border-navy text-navy text-xs font-medium tracking-widest uppercase px-5 py-3 rounded-sm hover:bg-navy hover:text-offwhite transition-colors">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            Abrir no Google Maps
+          </a>
+
+          <!-- Waze + Uber — somente mobile (sm:hidden) -->
+          <div class="flex gap-3 sm:hidden">
+            <a href="https://waze.com/ul?ll=-7.1199157,-34.8817816"
+               target="_blank" rel="noopener"
+               id="cta-waze" data-gtm-id="cta-waze"
+               class="flex-1 inline-flex items-center justify-center gap-2 border border-navy text-navy text-xs font-medium tracking-widest uppercase py-3 rounded-sm hover:bg-navy hover:text-offwhite transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+              </svg>
+              Waze
+            </a>
+            <a href="https://m.uber.com/ul/?action=setPickup&client_id=Fw0uh3oyw_6K9hSqYWdXlm2D-NnGg7D_&pickup=my_location&dropoff[latitude]=-7.1199157&dropoff[longitude]=-34.8817816&dropoff[nickname]=Lagoa%20Park%20Hotel&dropoff[formatted_address]=Parque%20S%C3%B3lon%20de%20Lucena%2C%2019%20-%20Centro%2C%20Jo%C3%A3o%20Pessoa%20-%20PB%2C%2058013-131%2C%20Brasil"
+               target="_blank" rel="noopener"
+               id="cta-uber" data-gtm-id="cta-uber"
+               class="flex-1 inline-flex items-center justify-center gap-2 border border-navy text-navy text-xs font-medium tracking-widest uppercase py-3 rounded-sm hover:bg-navy hover:text-offwhite transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13" rx="2"/>
+                <path d="M16 8h4l3 5v3h-7V8z"/>
+                <circle cx="5.5"  cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+              Uber
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ AVALIAÇÕES ══ -->
+  <section id="avaliacoes" class="py-20 lg:py-28 bg-navy">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-14 reveal">
+        <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-3">O que dizem os hóspedes</p>
+        <h2 class="font-display text-offwhite text-3xl sm:text-4xl lg:text-5xl font-light italic tracking-normal">Quem ficou, voltou.</h2>
+        <div class="flex items-center justify-center gap-2 mt-4" aria-label="Avaliação geral: 4.7 de 5 no Google">
+          <div class="flex gap-0.5" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="text-offwhite/60 text-sm">4.7 · Google</span>
+        </div>
+      </div>
+
+      <!-- Desktop: grid | Mobile: carrossel com swipe -->
+      <div class="reviews-track flex gap-5 overflow-x-auto pb-2
+                  md:overflow-visible md:grid md:grid-cols-3 md:gap-6">
+
+        <article class="review-card reveal flex-shrink-0 w-[80vw] sm:w-[60vw] md:w-auto
+                        bg-white/5 border border-white/10 rounded-sm p-6 flex flex-col gap-4">
+          <div class="flex gap-1" aria-label="5 estrelas" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote class="font-display text-offwhite/90 text-lg italic leading-relaxed flex-1">
+            "Um hotel que acolhe. Gratidão a todos: Sr. Francisco, Samuel, Fagner, Bárbara, Vitória, Guia e Aline. Já sei onde ficar quando voltar a João Pessoa!"
+          </blockquote>
+          <footer>
+            <cite class="text-offwhite text-sm font-medium not-italic">Ívina Sanches</cite>
+            <p class="text-offwhite/40 text-xs mt-0.5">Google · Nov/2025</p>
+          </footer>
+        </article>
+
+        <article class="review-card reveal flex-shrink-0 w-[80vw] sm:w-[60vw] md:w-auto
+                        bg-white/5 border border-white/10 rounded-sm p-6 flex flex-col gap-4">
+          <div class="flex gap-1" aria-label="5 estrelas" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote class="text-offwhite/80 text-sm leading-relaxed flex-1">
+            "Me hospedei lá e não tenho o que reclamar. Estava tudo limpo e bem arrumado. Os funcionários foram muito atenciosos e simpáticos."
+          </blockquote>
+          <footer>
+            <cite class="text-offwhite text-sm font-medium not-italic">Jefferson Silva</cite>
+            <p class="text-offwhite/40 text-xs mt-0.5">Google · Nov/2025</p>
+          </footer>
+        </article>
+
+        <article class="review-card reveal flex-shrink-0 w-[80vw] sm:w-[60vw] md:w-auto
+                        bg-white/5 border border-white/10 rounded-sm p-6 flex flex-col gap-4">
+          <div class="flex gap-1" aria-label="5 estrelas" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <blockquote class="text-offwhite/80 text-sm leading-relaxed flex-1">
+            "Ótimo lugar e um atendimento excelente do Samuel! Hotel bem localizado, organizado e com café da manhã muito saboroso."
+          </blockquote>
+          <footer>
+            <cite class="text-offwhite text-sm font-medium not-italic">Matheus Vitor</cite>
+            <p class="text-offwhite/40 text-xs mt-0.5">Google · Nov/2025</p>
+          </footer>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ CTA FINAL ══ -->
+  <section id="reservar" class="py-20 lg:py-28 bg-offwhite">
+    <div class="max-w-xl mx-auto px-4 sm:px-6 text-center reveal">
+      <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-4">Reserve agora</p>
+      <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-5xl font-light italic tracking-normal mb-4">
+        Escolha bem onde ficar.
+      </h2>
+      <p class="text-muted text-base leading-relaxed mb-10">
+        Reserve direto pelo site e garanta a melhor tarifa.<br class="hidden sm:block" />Sem intermediários.
+      </p>
+
+      <a href="#"
+         id="cta-reservar-final" data-gtm-id="cta-reservar-final"
+         class="inline-block bg-terracota text-offwhite text-sm font-medium tracking-widest uppercase px-10 py-4 rounded-sm hover:bg-terracota/90 transition-colors mb-10">
+        <!-- href: substituir pela URL da Foco Multimídia quando disponível -->
+        Verificar disponibilidade
+      </a>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-5 text-muted text-sm">
+        <a href="tel:+558330151414"
+           id="cta-telefone-final" data-gtm-id="cta-telefone-final"
+           class="flex items-center gap-2 hover:text-navy transition-colors">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6.09 6.09l1.16-1.16a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          (83) 3015-1414
+        </a>
+        <span class="hidden sm:block text-border" aria-hidden="true">·</span>
+        <a href="https://wa.me/558330151414?text=Ol%C3%A1%21+Gostaria+de+informa%C3%A7%C3%B5es+sobre+hospedagem+no+Lagoa+Park+Hotel."
+           target="_blank" rel="noopener"
+           id="cta-whatsapp-final" data-gtm-id="cta-whatsapp-final"
+           class="flex items-center gap-2 hover:text-navy transition-colors">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+          WhatsApp
+        </a>
+        <span class="hidden sm:block text-border" aria-hidden="true">·</span>
+        <a href="mailto:reservas@lagoaparkhotel.com.br"
+           id="cta-email-final" data-gtm-id="cta-email-final"
+           class="flex items-center gap-2 hover:text-navy transition-colors">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          reservas@lagoaparkhotel.com.br
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════ FOOTER ══ -->
+<footer class="bg-navy text-offwhite">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+
+      <!-- Logo + Endereço -->
+      <div class="lg:col-span-2">
+        <span class="text-offwhite font-semibold text-lg tracking-wide block mb-5">Lagoa Park Hotel</span>
+        <address class="not-italic text-offwhite/55 text-sm leading-relaxed mb-5">
+          Parque Sólon de Lucena, 19<br>
+          Centro · João Pessoa – PB · CEP 58013-131
+        </address>
+        <div class="flex flex-col gap-2">
+          <a href="tel:+558330151414"                         class="text-offwhite/55 hover:text-offwhite text-sm transition-colors">(83) 3015-1414</a>
+          <a href="mailto:contato@lagoaparkhotel.com.br"      class="text-offwhite/55 hover:text-offwhite text-sm transition-colors">contato@lagoaparkhotel.com.br</a>
+          <a href="mailto:reservas@lagoaparkhotel.com.br"     class="text-offwhite/55 hover:text-offwhite text-sm transition-colors">reservas@lagoaparkhotel.com.br</a>
+        </div>
+      </div>
+
+      <!-- Navegação -->
+      <div>
+        <h4 class="text-offwhite text-xs font-medium tracking-[0.15em] uppercase mb-5">Navegação</h4>
+        <ul class="space-y-3">
+          <li><a href="/quartos"  class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Quartos</a></li>
+          <li><a href="#localizacao" class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Como Chegar</a></li>
+          <li><a href="/atracoes" class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Atrações</a></li>
+          <li><a href="/faq"      class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Dúvidas Frequentes</a></li>
+          <li><a href="/grupos"   class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Grupos e Eventos</a></li>
+          <li><a href="/blog"     class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Blog</a></li>
+          <li><a href="/contato"  class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Contato</a></li>
+        </ul>
+      </div>
+
+      <!-- Redes + Reserva -->
+      <div>
+        <h4 class="text-offwhite text-xs font-medium tracking-[0.15em] uppercase mb-5">Redes Sociais</h4>
+        <ul class="space-y-3 mb-8">
+          <li>
+            <a href="https://www.instagram.com/lagoaparkhotel" target="_blank" rel="noopener"
+               class="flex items-center gap-2 text-offwhite/55 hover:text-terracota text-sm transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/lagoaparkhotel" target="_blank" rel="noopener"
+               class="flex items-center gap-2 text-offwhite/55 hover:text-terracota text-sm transition-colors">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+              Facebook
+            </a>
+          </li>
+        </ul>
+        <a href="#"
+           id="cta-reservar-footer" data-gtm-id="cta-reservar-footer"
+           class="inline-block bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase px-5 py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+          Reservar
+        </a>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-offwhite/35 text-xs">
+      <p>© 2026 Lagoa Park Hotel Ltda. Todos os direitos reservados.</p>
+      <a href="/politica-de-privacidade" class="hover:text-offwhite transition-colors">Política de Privacidade</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a href="https://wa.me/558330151414?text=Ol%C3%A1%21+Gostaria+de+informa%C3%A7%C3%B5es+sobre+hospedagem+no+Lagoa+Park+Hotel."
+   target="_blank" rel="noopener"
+   aria-label="Conversar pelo WhatsApp"
+   id="cta-whatsapp-float" data-gtm-id="cta-whatsapp-float"
+   class="fixed bottom-24 right-5 lg:bottom-6 lg:right-6 z-50 bg-[#25D366] text-white
+          w-14 h-14 rounded-full shadow-lg flex items-center justify-center
+          hover:scale-105 transition-transform duration-200">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- Botão Reservar fixo — somente mobile, acima do WhatsApp -->
+<div class="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-border px-4 py-3">
+  <a href="#"
+     id="cta-reservar-mobile-sticky" data-gtm-id="cta-reservar-mobile-sticky"
+     class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3.5 rounded-sm hover:bg-terracota/90 transition-colors">
+    Verificar disponibilidade
+  </a>
+</div>
+
+<!-- Leaflet CSS (lazy) -->
+<link id="leaflet-css" rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      media="print" onload="this.media='all'" />
+
+<script>
+  /* ── 1. Header shadow on scroll ── */
+  const header = document.getElementById('site-header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow-lg', window.scrollY > 80);
+  }, { passive: true });
+
+  /* ── 2. Mobile drawer ── */
+  const btnMenu  = document.getElementById('btn-menu');
+  const btnClose = document.getElementById('btn-close');
+  const drawer   = document.getElementById('drawer');
+  const overlay  = document.getElementById('drawer-overlay');
+
+  const openDrawer = () => {
+    drawer.classList.remove('translate-x-full');
+    overlay.classList.replace('opacity-0', 'opacity-100');
+    overlay.classList.remove('pointer-events-none');
+    btnMenu.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeDrawer = () => {
+    drawer.classList.add('translate-x-full');
+    overlay.classList.replace('opacity-100', 'opacity-0');
+    overlay.classList.add('pointer-events-none');
+    btnMenu.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  };
+
+  btnMenu.addEventListener('click', openDrawer);
+  btnClose.addEventListener('click', closeDrawer);
+  overlay.addEventListener('click', closeDrawer);
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+
+  /* ── 3. Formulário de reserva ── */
+  const RESERVA_URL = '#'; /* substituir pela URL da Foco Multimídia */
+  document.getElementById('form-reserva').addEventListener('submit', e => {
+    e.preventDefault();
+    const ci = document.getElementById('checkin').value;
+    const co = document.getElementById('checkout').value;
+    const err = document.getElementById('form-error');
+    if (!ci || !co) {
+      err.classList.remove('hidden');
+      return;
+    }
+    err.classList.add('hidden');
+    window.open(RESERVA_URL, '_blank');
+  });
+
+  /* ── 4. Scroll reveal ── */
+  const revObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+  /* ── 5. Mapa Leaflet — lazy load ── */
+  let mapReady = false;
+  const mapEl  = document.getElementById('map');
+  const mapObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting && !mapReady) {
+      mapReady = true;
+      mapObs.disconnect();
+      const s  = document.createElement('script');
+      s.src    = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+      s.onload = () => {
+        mapEl.innerHTML = '';
+        const map = L.map('map', { scrollWheelZoom: false })
+                     .setView([-7.1199157, -34.8817816], 16);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+          maxZoom: 19,
+        }).addTo(map);
+        L.marker([-7.1199157, -34.8817816])
+          .addTo(map)
+          .bindPopup('<strong>Lagoa Park Hotel</strong><br>Parque Sólon de Lucena, 19')
+          .openPopup();
+      };
+      document.head.appendChild(s);
+    }
+  }, { rootMargin: '300px' });
+  mapObs.observe(mapEl);
+</script>
+
+</body>
+</html>
