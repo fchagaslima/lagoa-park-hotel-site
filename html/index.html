@@ -465,116 +465,198 @@
         <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-5xl font-light italic tracking-normal">Escolha o seu apartamento</h2>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+      <!-- ── Linha Econômico ── -->
+      <div class="mb-14">
+        <div class="flex items-center gap-4 mb-8 reveal">
+          <span class="text-[0.6rem] font-medium tracking-[0.22em] uppercase text-muted whitespace-nowrap">Linha Econômico</span>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-        <!-- Individual -->
-        <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
-          <div class="aspect-[4/3] overflow-hidden bg-navy/10">
-            <img src="/assets/img/quartos/individual.webp"
-                 alt="Quarto Individual do Lagoa Park Hotel — cama de casal, ar-condicionado e mesa de trabalho"
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 loading="lazy" decoding="async" width="400" height="300" />
-          </div>
-          <div class="p-6">
-            <div class="flex items-baseline justify-between mb-3">
-              <h3 class="text-navy text-lg font-medium">Individual</h3>
-              <span class="text-muted text-xs tracking-wide">21 m² · 1 hóspede</span>
+          <!-- Econômico -->
+          <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+            <div class="aspect-[4/3] overflow-hidden bg-navy/10">
+              <img src="/assets/img/quartos/economico.webp"
+                   alt="Quarto Econômico do Lagoa Park Hotel — configuração flexível de camas para até 3 pessoas"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   loading="lazy" decoding="async" width="400" height="300" />
             </div>
-            <ul class="text-muted text-sm space-y-1.5 mb-6">
-              <li class="flex items-center gap-2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Ar-condicionado
-              </li>
-              <li class="flex items-center gap-2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Wi-Fi incluído
-              </li>
-              <li class="flex items-center gap-2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Mesa de trabalho
-              </li>
-            </ul>
-            <a href="#"
-               id="cta-reservar-individual" data-gtm-id="cta-reservar-individual" data-gtm-quarto="individual"
-               class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
-              Reservar
-            </a>
-          </div>
-        </article>
-
-        <!-- Casal / Duplo -->
-        <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
-          <div class="aspect-[4/3] overflow-hidden bg-navy/10">
-            <img src="/assets/img/quartos/casal.webp"
-                 alt="Quarto Casal do Lagoa Park Hotel — cama de casal, ar-condicionado e frigobar"
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 loading="lazy" decoding="async" width="400" height="300" />
-          </div>
-          <div class="p-6">
-            <div class="flex items-baseline justify-between mb-3">
-              <h3 class="text-navy text-lg font-medium">Casal / Duplo</h3>
-              <span class="text-muted text-xs tracking-wide">21 m² · 2 hóspedes</span>
+            <div class="p-6">
+              <div class="flex items-baseline justify-between mb-1">
+                <h3 class="text-navy text-lg font-medium">Econômico</h3>
+                <span class="text-muted text-xs tracking-wide">até 3 adultos</span>
+              </div>
+              <p class="text-muted text-xs mb-5">1 casal + 1 solteiro · ou · 3 solteiro</p>
+              <ul class="text-muted text-sm space-y-1.5 mb-6">
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Ar-condicionado</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>TV 32"</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Wi-Fi incluído</li>
+              </ul>
+              <a href="#" id="cta-reservar-economico" data-gtm-id="cta-reservar-economico" data-gtm-quarto="economico"
+                 class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+                Reservar
+              </a>
             </div>
-            <ul class="text-muted text-sm space-y-1.5 mb-6">
-              <li class="flex items-center gap-2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Cama casal ou dupla
-              </li>
-              <li class="flex items-center gap-2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Ar-condicionado + Frigobar
-              </li>
-              <li class="flex items-center gap-2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                TV canal aberto
-              </li>
-            </ul>
-            <a href="#"
-               id="cta-reservar-casal" data-gtm-id="cta-reservar-casal" data-gtm-quarto="casal"
-               class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
-              Reservar
-            </a>
-          </div>
-        </article>
+          </article>
 
-        <!-- Triplo -->
-        <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
-          <div class="aspect-[4/3] overflow-hidden bg-navy/10">
-            <img src="/assets/img/quartos/triplo.webp"
-                 alt="Quarto Triplo do Lagoa Park Hotel — três camas, ideal para grupos e famílias"
-                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                 loading="lazy" decoding="async" width="400" height="300" />
-          </div>
-          <div class="p-6">
-            <div class="flex items-baseline justify-between mb-3">
-              <h3 class="text-navy text-lg font-medium">Triplo</h3>
-              <span class="text-muted text-xs tracking-wide">21 m² · até 3 hóspedes</span>
+          <!-- Econômico Casal -->
+          <article class="reveal reveal-d1 group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+            <div class="aspect-[4/3] overflow-hidden bg-navy/10">
+              <img src="/assets/img/quartos/economico-casal.webp"
+                   alt="Quarto Econômico Casal do Lagoa Park Hotel — cama de casal"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   loading="lazy" decoding="async" width="400" height="300" />
             </div>
-            <ul class="text-muted text-sm space-y-1.5 mb-6">
-              <li class="flex items-center gap-2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                3 camas solteiro ou casal + solteiro
-              </li>
-              <li class="flex items-center gap-2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Ar-condicionado + Frigobar
-              </li>
-              <li class="flex items-center gap-2">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                TV canal aberto
-              </li>
-            </ul>
-            <a href="#"
-               id="cta-reservar-triplo" data-gtm-id="cta-reservar-triplo" data-gtm-quarto="triplo"
-               class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
-              Reservar
-            </a>
-          </div>
-        </article>
+            <div class="p-6">
+              <div class="flex items-baseline justify-between mb-1">
+                <h3 class="text-navy text-lg font-medium">Econômico Casal</h3>
+                <span class="text-muted text-xs tracking-wide">até 2 adultos</span>
+              </div>
+              <p class="text-muted text-xs mb-5">1 cama casal</p>
+              <ul class="text-muted text-sm space-y-1.5 mb-6">
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Ar-condicionado</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>TV 32"</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Wi-Fi incluído</li>
+              </ul>
+              <a href="#" id="cta-reservar-economico-casal" data-gtm-id="cta-reservar-economico-casal" data-gtm-quarto="economico-casal"
+                 class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+                Reservar
+              </a>
+            </div>
+          </article>
 
+        </div>
       </div>
 
-      <div class="text-center mt-12 reveal">
+      <!-- ── Linha Standard ── -->
+      <div class="mb-14">
+        <div class="flex items-center gap-4 mb-8 reveal">
+          <span class="text-[0.6rem] font-medium tracking-[0.22em] uppercase text-muted whitespace-nowrap">Linha Standard</span>
+          <div class="flex-1 h-px bg-border"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Standard -->
+          <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+            <div class="aspect-[4/3] overflow-hidden bg-navy/10">
+              <img src="/assets/img/quartos/standard.webp"
+                   alt="Quarto Standard do Lagoa Park Hotel — configuração flexível de camas para até 3 pessoas"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   loading="lazy" decoding="async" width="400" height="300" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-baseline justify-between mb-1">
+                <h3 class="text-navy text-lg font-medium">Standard</h3>
+                <span class="text-muted text-xs tracking-wide">até 3 adultos</span>
+              </div>
+              <p class="text-muted text-xs mb-5">1 casal + 1 solteiro · ou · 3 solteiro</p>
+              <ul class="text-muted text-sm space-y-1.5 mb-6">
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Ar-condicionado</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>TV 32"</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Wi-Fi incluído</li>
+              </ul>
+              <a href="#" id="cta-reservar-standard" data-gtm-id="cta-reservar-standard" data-gtm-quarto="standard"
+                 class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+                Reservar
+              </a>
+            </div>
+          </article>
+
+          <!-- Standard Casal -->
+          <article class="reveal reveal-d1 group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+            <div class="aspect-[4/3] overflow-hidden bg-navy/10">
+              <img src="/assets/img/quartos/standard-casal.webp"
+                   alt="Quarto Standard Casal do Lagoa Park Hotel — cama de casal com frigobar"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   loading="lazy" decoding="async" width="400" height="300" />
+            </div>
+            <div class="p-6">
+              <div class="flex items-baseline justify-between mb-1">
+                <h3 class="text-navy text-lg font-medium">Standard Casal</h3>
+                <span class="text-muted text-xs tracking-wide">até 2 adultos</span>
+              </div>
+              <p class="text-muted text-xs mb-5">1 cama casal</p>
+              <ul class="text-muted text-sm space-y-1.5 mb-6">
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Ar-condicionado</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>TV 32" + Frigobar</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Wi-Fi incluído</li>
+              </ul>
+              <a href="#" id="cta-reservar-standard-casal" data-gtm-id="cta-reservar-standard-casal" data-gtm-quarto="standard-casal"
+                 class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+                Reservar
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ── Linha Confort — Recém-reformado ── -->
+      <div>
+        <div class="flex items-center gap-4 mb-8 reveal">
+          <span class="text-[0.6rem] font-medium tracking-[0.22em] uppercase text-terracota whitespace-nowrap">Linha Confort — Recém-reformado</span>
+          <div class="flex-1 h-px bg-terracota/30"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+          <!-- Confort -->
+          <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+            <div class="relative aspect-[4/3] overflow-hidden bg-navy/10">
+              <img src="/assets/img/quartos/confort.webp"
+                   alt="Quarto Confort do Lagoa Park Hotel — recém-reformado, configuração flexível de camas"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   loading="lazy" decoding="async" width="400" height="300" />
+              <span class="absolute top-3 left-3 bg-terracota text-offwhite text-[0.6rem] font-medium tracking-widest uppercase px-2 py-1 rounded-sm">Reformado mar/2025</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-baseline justify-between mb-1">
+                <h3 class="text-navy text-lg font-medium">Confort</h3>
+                <span class="text-muted text-xs tracking-wide">até 3 adultos</span>
+              </div>
+              <p class="text-muted text-xs mb-5">1 casal + 1 solteiro · ou · 3 solteiro</p>
+              <ul class="text-muted text-sm space-y-1.5 mb-6">
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Ar-condicionado</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>TV 32" + Frigobar</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Instalações renovadas</li>
+              </ul>
+              <a href="#" id="cta-reservar-confort" data-gtm-id="cta-reservar-confort" data-gtm-quarto="confort"
+                 class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+                Reservar
+              </a>
+            </div>
+          </article>
+
+          <!-- Confort Studio -->
+          <article class="reveal reveal-d1 group bg-white rounded-sm overflow-hidden border border-terracota/25 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
+            <div class="relative aspect-[4/3] overflow-hidden bg-navy/10">
+              <img src="/assets/img/quartos/confort-studio.webp"
+                   alt="Quarto Confort Studio do Lagoa Park Hotel — recém-reformado, mini copa e mesa de trabalho ampla"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                   loading="lazy" decoding="async" width="400" height="300" />
+              <span class="absolute top-3 left-3 bg-terracota text-offwhite text-[0.6rem] font-medium tracking-widest uppercase px-2 py-1 rounded-sm">Reformado mar/2025</span>
+            </div>
+            <div class="p-6">
+              <div class="flex items-baseline justify-between mb-1">
+                <h3 class="text-navy text-lg font-medium">Confort Studio</h3>
+                <span class="text-muted text-xs tracking-wide">até 2 adultos</span>
+              </div>
+              <p class="text-muted text-xs mb-5">1 cama casal</p>
+              <ul class="text-muted text-sm space-y-1.5 mb-6">
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Ar-condicionado + Frigobar</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Mini copa (micro-ondas + cafeteira)</li>
+                <li class="flex items-center gap-2"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C0603A" stroke-width="2" stroke-linecap="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Poltrona + mesa de trabalho ampla</li>
+              </ul>
+              <a href="#" id="cta-reservar-confort-studio" data-gtm-id="cta-reservar-confort-studio" data-gtm-quarto="confort-studio"
+                 class="block w-full bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center py-3 rounded-sm hover:bg-terracota/90 transition-colors">
+                Reservar
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="text-center mt-14 reveal">
         <a href="/quartos" class="inline-flex items-center gap-2 text-navy text-sm font-medium border-b border-navy/30 hover:border-navy pb-0.5 transition-colors">
           Ver todos os apartamentos
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
