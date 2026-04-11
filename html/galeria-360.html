@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria 360º — Lagoa Park Hotel</title>
+  <meta name="description" content="Explore os ambientes do Lagoa Park Hotel em fotos 360º interativas. Veja a fachada, recepção e mais." />
+  <link rel="canonical" href="https://www.lagoaparkhotel.com.br/galeria-360" />
+
+  <!-- Pannellum CSS -->
+  <link rel="stylesheet" href="assets/lib/pannellum/pannellum.css" />
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Fonte: Outfit -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:      '#1B2F5E',
+            offwhite:  '#F5F3EE',
+            terracota: '#C0603A',
+            surface:   '#FAFAF8',
+            muted:     '#6B7280',
+            border:    '#E5E7EB',
+            text:      '#2D3748',
+            sand:      '#E8DDD0',
+          },
+          fontFamily: {
+            sans:    ['Outfit', 'system-ui', 'sans-serif'],
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- CSS Customizado -->
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Pannellum container */
+    .pannellum-container {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Grid de ambientes -->
+    .ambiente-card {
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid #E5E7EB;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .ambiente-card:hover {
+      border-color: #C0603A;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 12px rgba(192, 96, 58, 0.2);
+    }
+    .ambiente-card.active {
+      border-color: #C0603A;
+      background-color: #F5F3EE;
+    }
+
+    /* Foto preview dos ambientes -->
+    .ambiente-preview {
+      width: 100%;
+      height: 160px;
+      background-color: #FAFAF8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    /* Info do ambiente -->
+    .ambiente-info {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 0.875rem;
+      color: #6B7280;
+    }
+    .breadcrumb a {
+      color: #C0603A;
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    /* Loader -->
+    .loader {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 3px solid #E5E7EB;
+      border-top: 3px solid #1B2F5E;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Responsive -->
+    @media (max-width: 768px) {
+      .ambiente-preview {
+        height: 120px;
+      }
+      .ambiente-info {
+        padding: 0.75rem;
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-offwhite font-sans text-text antialiased">
+
+<!-- ═══════════════════════════════════════════ HEADER ══ -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-navy shadow-sm">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="index.html" aria-label="Lagoa Park Hotel — Página inicial" class="flex-shrink-0">
+      <span class="text-offwhite font-semibold text-lg tracking-wide">Lagoa Park Hotel</span>
+    </a>
+
+    <!-- Breadcrumb Mobile-friendly -->
+    <nav class="hidden sm:flex items-center gap-2 text-offwhite/70 text-xs tracking-widest uppercase">
+      <a href="index.html" class="hover:text-offwhite">Home</a>
+      <span class="text-offwhite/40">/</span>
+      <span class="text-offwhite">Galeria 360º</span>
+    </nav>
+
+    <!-- CTA -->
+    <div class="flex items-center gap-3">
+      <a href="index.html#inicio"
+         class="bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase px-4 py-2 rounded-sm hover:bg-terracota/90 transition-colors">
+        Reservar
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="pt-20">
+
+  <!-- ════════════════════════════════════════════ HERO ══ -->
+  <section class="bg-gradient-to-b from-navy to-navy/80 text-center py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-offwhite/60 text-xs font-medium tracking-[0.25em] uppercase mb-4">Explore o Hotel</p>
+      <h1 class="text-offwhite text-4xl sm:text-5xl font-semibold mb-4 leading-tight">
+        Galeria 360º
+      </h1>
+      <p class="text-offwhite/75 text-base sm:text-lg font-light">
+        Explore os ambientes do Lagoa Park Hotel em fotos esféricas 360º interativas.<br>
+        <span class="text-sm">Clique e arraste para rotacionar • Zoom com scroll • Fullscreen disponível</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ VISUALIZADOR ══ -->
+  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+    <!-- Visualizador Pannellum -->
+    <div id="pannellum-viewer" class="pannellum-container w-full h-[400px] sm:h-[500px] lg:h-[600px] mb-12">
+      <!-- Será preenchido por JavaScript -->
+      <div class="w-full h-full flex items-center justify-center bg-surface">
+        <div class="text-center">
+          <div class="loader mx-auto mb-4"></div>
+          <p class="text-muted">Carregando foto 360º...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Info da foto atual -->
+    <div class="bg-white rounded-lg p-6 mb-12 border border-border">
+      <h2 id="ambiente-titulo" class="text-2xl font-semibold text-navy mb-2">Fachada</h2>
+      <p id="ambiente-descricao" class="text-muted">
+        Vista frontal do Lagoa Park Hotel em João Pessoa, localizado à frente da Lagoa Sólon de Lucena.
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ GRID DE AMBIENTES ══ -->
+  <section class="bg-surface py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-2">Navegação</p>
+        <h2 class="text-3xl sm:text-4xl font-semibold text-navy">Escolha um Ambiente</h2>
+      </div>
+
+      <!-- Grid de Ambientes -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+
+        <!-- Fachada -->
+        <div class="ambiente-card active" data-ambiente="fachada" data-foto="01-fachada.jpg">
+          <div class="ambiente-preview">🏨</div>
+          <div class="ambiente-info">
+            <p class="font-medium text-sm">Fachada</p>
+            <p class="text-xs text-muted">1 foto</p>
+          </div>
+        </div>
+
+        <!-- Recepção -->
+        <div class="ambiente-card" data-ambiente="recepcao" data-fotos="02-recepcao-01.jpg,03-recepcao-02.jpg,04-recepcao-03.jpg,05-recepcao-04.jpg">
+          <div class="ambiente-preview">🛎️</div>
+          <div class="ambiente-info">
+            <p class="font-medium text-sm">Recepção</p>
+            <p class="text-xs text-muted">4 fotos</p>
+          </div>
+        </div>
+
+        <!-- Placeholder para próximas seções -->
+        <div class="ambiente-card opacity-50 cursor-not-allowed" disabled>
+          <div class="ambiente-preview">🍽️</div>
+          <div class="ambiente-info">
+            <p class="font-medium text-sm">Restaurante</p>
+            <p class="text-xs text-muted">Em breve</p>
+          </div>
+        </div>
+
+        <div class="ambiente-card opacity-50 cursor-not-allowed" disabled>
+          <div class="ambiente-preview">🛏️</div>
+          <div class="ambiente-info">
+            <p class="font-medium text-sm">Apartamentos</p>
+            <p class="text-xs text-muted">Em breve</p>
+          </div>
+        </div>
+
+        <div class="ambiente-card opacity-50 cursor-not-allowed" disabled>
+          <div class="ambiente-preview">🚿</div>
+          <div class="ambiente-info">
+            <p class="font-medium text-sm">Banheiros</p>
+            <p class="text-xs text-muted">Em breve</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ GALERIA DE FOTOS (Se houver múltiplas) ══ -->
+  <section id="galeria-fotos" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16" style="display: none;">
+    <div class="mb-8">
+      <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-2">Mais Vistas</p>
+      <h3 class="text-2xl font-semibold text-navy mb-6">Outras Fotos do Ambiente</h3>
+    </div>
+    <div id="galeria-container" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- Será preenchido por JavaScript -->
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════ CTA FINAL ══ -->
+  <section class="bg-navy text-center py-16 px-4">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="text-offwhite text-3xl sm:text-4xl font-semibold mb-4">
+        Gostou do que viu?
+      </h2>
+      <p class="text-offwhite/75 text-lg mb-8">
+        Venha conhecer o Lagoa Park Hotel pessoalmente. Localização privilegiada no coração de João Pessoa.
+      </p>
+      <a href="index.html#inicio"
+         class="inline-block bg-terracota text-offwhite text-sm font-medium tracking-widest uppercase px-6 py-4 rounded-sm hover:bg-terracota/90 transition-colors">
+        Fazer Reserva
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════ FOOTER ══ -->
+<footer class="bg-navy text-offwhite py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+      <!-- Sobre -->
+      <div>
+        <h3 class="font-semibold text-lg mb-4">Lagoa Park Hotel</h3>
+        <p class="text-offwhite/70 text-sm">
+          Hotel urbano no coração de João Pessoa, à frente da Lagoa Sólon de Lucena.
+        </p>
+      </div>
+      <!-- Links -->
+      <div>
+        <h4 class="font-semibold text-sm uppercase tracking-widest mb-4">Navegação</h4>
+        <ul class="space-y-2 text-offwhite/70 text-sm">
+          <li><a href="index.html" class="hover:text-offwhite">Home</a></li>
+          <li><a href="index.html#quartos" class="hover:text-offwhite">Quartos</a></li>
+          <li><a href="galeria-360.html" class="hover:text-offwhite text-terracota">Galeria 360º</a></li>
+        </ul>
+      </div>
+      <!-- Contato -->
+      <div>
+        <h4 class="font-semibold text-sm uppercase tracking-widest mb-4">Contato</h4>
+        <ul class="space-y-2 text-offwhite/70 text-sm">
+          <li><a href="tel:+558330151414" class="hover:text-offwhite">(83) 3015-1414</a></li>
+          <li><a href="https://wa.me/558330151414" target="_blank" rel="noopener" class="hover:text-offwhite">WhatsApp</a></li>
+        </ul>
+      </div>
+      <!-- Redes Sociais -->
+      <div>
+        <h4 class="font-semibold text-sm uppercase tracking-widest mb-4">Redes Sociais</h4>
+        <div class="flex gap-4">
+          <a href="#" class="text-offwhite/70 hover:text-terracota transition-colors" aria-label="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+          </a>
+          <a href="#" class="text-offwhite/70 hover:text-terracota transition-colors" aria-label="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a6 6 0 0 0-6 6v3H7v4h2v8h4v-8h3l1-4h-4V8a2 2 0 0 1 2-2h1z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-offwhite/10 pt-8 text-center text-offwhite/60 text-sm">
+      <p>&copy; 2026 Lagoa Park Hotel. Todos os direitos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════ PANNELLUM ══ -->
+<script src="assets/lib/pannellum/pannellum.js"></script>
+
+<!-- ═══════════════════════════════════════════ SCRIPT CUSTOMIZADO ══ -->
+<script>
+(function() {
+  // Config dos ambientes
+  const ambientes = {
+    fachada: {
+      titulo: 'Fachada',
+      descricao: 'Vista frontal do Lagoa Park Hotel em João Pessoa, localizado à frente da Lagoa Sólon de Lucena.',
+      fotos: ['01-fachada.jpg'],
+      emoji: '🏨'
+    },
+    recepcao: {
+      titulo: 'Recepção',
+      descricao: 'Recepção moderna e acolhedora, onde nossos hóspedes são recebidos com atenção especial. Aberta 24 horas.',
+      fotos: ['02-recepcao-01.jpg', '03-recepcao-02.jpg', '04-recepcao-03.jpg', '05-recepcao-04.jpg'],
+      emoji: '🛎️'
+    }
+  };
+
+  let pannellumViewer = null;
+  let ambienteAtual = 'fachada';
+  let fotoAtualIndex = 0;
+
+  // Inicializa Pannellum
+  function initPannellum(fotoPath) {
+    // Destroy viewer anterior se existir
+    if (pannellumViewer) {
+      pannellumViewer.destroy();
+    }
+
+    const container = document.getElementById('pannellum-viewer');
+
+    pannellumViewer = pannellum.viewer('pannellum-viewer', {
+      type: 'equirectangular',
+      panorama: `assets/img/360/${fotoPath}`,
+      autoLoad: true,
+      orientationOnByDefault: false,
+      showControls: true,
+      mouseZoom: true,
+      autoRotate: -2, // Rotação automática lenta
+      autoRotateInactivityDelay: 3000, // Inicia após 3 segundos inativo
+      yaw: 0,
+      pitch: 0,
+      hfov: 100,
+      minHfov: 50,
+      maxHfov: 120
+    });
+  }
+
+  // Atualiza conteúdo quando ambiente muda
+  function atualizarAmbiente(ambiente) {
+    ambienteAtual = ambiente;
+    fotoAtualIndex = 0;
+
+    const config = ambientes[ambiente];
+    document.getElementById('ambiente-titulo').textContent = config.titulo;
+    document.getElementById('ambiente-descricao').textContent = config.descricao;
+
+    // Atualiza card ativo
+    document.querySelectorAll('.ambiente-card').forEach(card => {
+      card.classList.remove('active');
+    });
+    document.querySelector(`[data-ambiente="${ambiente}"]`).classList.add('active');
+
+    // Carrega primeira foto do ambiente
+    initPannellum(config.fotos[0]);
+
+    // Mostra/esconde galeria de fotos
+    const galeraSection = document.getElementById('galeria-fotos');
+    const galeraContainer = document.getElementById('galeria-container');
+
+    if (config.fotos.length > 1) {
+      galeraSection.style.display = 'block';
+      galeraContainer.innerHTML = config.fotos.map((foto, index) => `
+        <div class="ambiente-card cursor-pointer galeria-foto" data-index="${index}">
+          <div class="ambiente-preview" style="font-size: 2rem;">
+            ${index === 0 ? '✓' : `${index + 1}`}
+          </div>
+          <div class="ambiente-info">
+            <p class="font-medium text-xs">Vista ${index + 1}</p>
+          </div>
+        </div>
+      `).join('');
+
+      // Add listeners para as fotos da galeria
+      document.querySelectorAll('.galeria-foto').forEach(card => {
+        card.addEventListener('click', function() {
+          const index = parseInt(this.dataset.index);
+          fotoAtualIndex = index;
+          initPannellum(config.fotos[index]);
+
+          // Atualiza cards da galeria
+          document.querySelectorAll('.galeria-foto').forEach(c => {
+            c.classList.remove('active');
+          });
+          this.classList.add('active');
+        });
+      });
+    } else {
+      galeraSection.style.display = 'none';
+    }
+  }
+
+  // Event listeners dos cards de ambiente
+  document.querySelectorAll('.ambiente-card[data-ambiente]').forEach(card => {
+    card.addEventListener('click', function() {
+      const ambiente = this.dataset.ambiente;
+      atualizarAmbiente(ambiente);
+    });
+  });
+
+  // Inicializa com primeira foto (fachada)
+  initPannellum(ambientes.fachada.fotos[0]);
+})();
+</script>
+
+</body>
+</html>

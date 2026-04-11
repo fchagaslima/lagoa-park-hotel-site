@@ -12,14 +12,14 @@
   <meta property="og:title"       content="Lagoa Park Hotel — No centro de João Pessoa. Em frente à Lagoa." />
   <meta property="og:description" content="38 apartamentos no coração de João Pessoa, em frente à Lagoa Sólon de Lucena." />
   <meta property="og:url"         content="https://www.lagoaparkhotel.com.br/" />
-  <meta property="og:image"       content="https://www.lagoaparkhotel.com.br/assets/img/hero/hero-lagoa.webp" />
+  <meta property="og:image"       content="https://www.lagoaparkhotel.com.br/assets/img/atracoes/1920x560-parquedalagoa02.jpg" />
   <meta property="og:locale"      content="pt_BR" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card"        content="summary_large_image" />
   <meta name="twitter:title"       content="Lagoa Park Hotel — João Pessoa" />
   <meta name="twitter:description" content="38 apartamentos em frente à Lagoa Sólon de Lucena." />
-  <meta name="twitter:image"       content="https://www.lagoaparkhotel.com.br/assets/img/hero/hero-lagoa.webp" />
+  <meta name="twitter:image"       content="https://www.lagoaparkhotel.com.br/assets/img/atracoes/1920x560-parquedalagoa02.jpg" />
 
   <!-- Preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -112,11 +112,50 @@
         rgba(27,47,94,0.018) 6px
       );
     }
+
+    /* ── Carrossel Hero ── */
+    .hero-slide {
+      opacity: 0;
+      z-index: 0;
+      transition: opacity 0.7s ease-in-out;
+    }
+    .hero-slide.active {
+      opacity: 1;
+      z-index: 10;
+    }
+
+    /* Indicadores de slide */
+    .carousel-indicator {
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .carousel-indicator.active {
+      background-color: rgba(245, 243, 238, 0.9) !important;
+      width: 32px;
+    }
+    .carousel-indicator:not(.active) {
+      background-color: rgba(245, 243, 238, 0.4);
+      width: 10px;
+    }
+    .carousel-indicator:hover:not(.active) {
+      background-color: rgba(245, 243, 238, 0.6);
+    }
+
+    /* Responsividade: indicadores menores em mobile */
+    @media (max-width: 640px) {
+      .carousel-indicator {
+        width: 8px !important;
+        height: 8px !important;
+      }
+      .carousel-indicator.active {
+        width: 24px !important;
+      }
+    }
   </style>
 
   <!-- Favicon (substituir pelos arquivos reais) -->
-  <link rel="icon"             href="/assets/img/logo/favicon.ico" />
-  <link rel="apple-touch-icon" href="/assets/img/logo/apple-touch-icon.png" />
+  <link rel="icon"             href="assets/img/logo/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/img/logo/apple-touch-icon.png" />
 
   <!-- Schema.org: Hotel -->
   <script type="application/ld+json">
@@ -145,7 +184,7 @@
     "checkinTime": "14:00",
     "checkoutTime": "12:00",
     "priceRange": "$$",
-    "image": "https://www.lagoaparkhotel.com.br/assets/img/hero/hero-lagoa.webp",
+    "image": "https://www.lagoaparkhotel.com.br/assets/img/atracoes/1920x560-parquedalagoa02.jpg",
     "amenityFeature": [
       { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuito",      "value": true },
       { "@type": "LocationFeatureSpecification", "name": "Café da manhã incluso","value": true },
@@ -176,12 +215,13 @@
 
     <!-- Nav Desktop -->
     <nav class="hidden lg:flex items-center gap-8" aria-label="Menu principal">
-      <a href="#inicio"    class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Home</a>
-      <a href="/quartos"   class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Quartos</a>
-      <a href="/atracoes"  class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Atrações</a>
-      <a href="/faq"       class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">FAQ</a>
-      <a href="/blog"      class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Blog</a>
-      <a href="/contato"   class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Contato</a>
+      <a href="#inicio"      class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Home</a>
+      <a href="/quartos"     class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Quartos</a>
+      <a href="/atracoes"    class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Atrações</a>
+      <a href="galeria-360.html" class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Fotos 360º</a>
+      <a href="/faq"         class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">FAQ</a>
+      <a href="/blog"        class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Blog</a>
+      <a href="/contato"     class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase transition-colors">Contato</a>
     </nav>
 
     <!-- CTA Desktop -->
@@ -225,12 +265,13 @@
       <line x1="6"  y1="6" x2="18" y2="18"/>
     </svg>
   </button>
-  <a href="#inicio"   class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Home</a>
-  <a href="/quartos"  class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Quartos</a>
-  <a href="/atracoes" class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Atrações</a>
-  <a href="/faq"      class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">FAQ</a>
-  <a href="/blog"     class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Blog</a>
-  <a href="/contato"  class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Contato</a>
+  <a href="#inicio"      class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Home</a>
+  <a href="/quartos"     class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Quartos</a>
+  <a href="/atracoes"    class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Atrações</a>
+  <a href="galeria-360.html" class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Fotos 360º</a>
+  <a href="/faq"         class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">FAQ</a>
+  <a href="/blog"        class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Blog</a>
+  <a href="/contato"     class="text-offwhite/75 hover:text-offwhite text-xs font-medium tracking-widest uppercase py-2 border-b border-white/10">Contato</a>
   <a href="#"
      id="cta-reservar-drawer" data-gtm-id="cta-reservar-drawer"
      class="mt-4 bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase text-center px-5 py-4 rounded-sm hover:bg-terracota/90 transition-colors">
@@ -243,22 +284,49 @@
   <!-- ════════════════════════════════════════════ HERO ══ -->
   <section id="inicio" class="relative h-screen min-h-[600px] flex flex-col justify-center items-center text-center overflow-hidden">
 
-    <!-- Foto de fundo -->
-    <img
-      src="/assets/img/hero/hero-lagoa.webp"
-      alt="Vista aérea da Lagoa do Parque Sólon de Lucena ao entardecer, com a fachada do Lagoa Park Hotel ao fundo"
-      class="absolute inset-0 w-full h-full object-cover object-center"
-      fetchpriority="high"
-      decoding="async"
-    />
+    <!-- Carrossel de Fotos -->
+    <div id="hero-carousel" class="absolute inset-0 w-full h-full">
+      <!-- Slide 1: Lagoa -->
+      <img
+        class="hero-slide active absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700"
+        src="assets/img/atracoes/1920x560-parquedalagoa02.jpg"
+        alt="Vista panorâmica da Lagoa do Parque Sólon de Lucena em João Pessoa"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <!-- Slide 2: Centro Histórico -->
+      <img
+        class="hero-slide absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700"
+        src="assets/img/atracoes/1920x960-centrohistorico01.jpg"
+        alt="Centro histórico de João Pessoa com arquitetura colonial"
+        loading="lazy"
+        decoding="async"
+      />
+      <!-- Slide 3: Recepção -->
+      <img
+        class="hero-slide absolute inset-0 w-full h-full object-cover object-center transition-opacity duration-700"
+        src="assets/img/atracoes/1920x560-recepcao01.jpg"
+        alt="Recepção do Lagoa Park Hotel — acolhimento ao hóspede"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+
     <!-- Overlay -->
     <div class="hero-overlay absolute inset-0" aria-hidden="true"></div>
+
+    <!-- Indicadores de Slides -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+      <button class="carousel-indicator active w-2.5 h-2.5 rounded-full bg-offwhite/60 transition-all duration-300 hover:bg-offwhite" aria-label="Slide 1" data-index="0"></button>
+      <button class="carousel-indicator w-2.5 h-2.5 rounded-full bg-offwhite/60 transition-all duration-300 hover:bg-offwhite" aria-label="Slide 2" data-index="1"></button>
+      <button class="carousel-indicator w-2.5 h-2.5 rounded-full bg-offwhite/60 transition-all duration-300 hover:bg-offwhite" aria-label="Slide 3" data-index="2"></button>
+    </div>
 
     <!-- Conteúdo -->
     <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 pb-16">
       <p class="text-offwhite/60 text-xs font-medium tracking-[0.25em] uppercase mb-5">João Pessoa · Paraíba · Brasil</p>
 
-      <h1 class="font-display text-offwhite text-5xl sm:text-6xl lg:text-[4.5rem] font-light italic leading-tight tracking-normal mb-5">
+      <h1 class="font-display text-offwhite text-5xl sm:text-6xl lg:text-[3.5rem] font-semibold leading-tight tracking-[-0.02em] mb-5">
         No centro de João Pessoa.<br>Em frente à Lagoa.
       </h1>
 
@@ -462,7 +530,7 @@
 
       <div class="text-center mb-16 reveal">
         <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-3">Acomodações</p>
-        <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-5xl font-light italic tracking-normal">Escolha o seu apartamento</h2>
+        <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-[1.75rem] font-medium tracking-normal">Escolha o seu apartamento</h2>
       </div>
 
       <!-- ── Linha Econômico ── -->
@@ -476,7 +544,7 @@
           <!-- Econômico -->
           <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
             <div class="aspect-[4/3] overflow-hidden bg-navy/10">
-              <img src="/assets/img/quartos/economico.webp"
+              <img src="assets/img/quartos/AP-economico/_MG_9809-01.jpeg"
                    alt="Quarto Econômico do Lagoa Park Hotel — configuração flexível de camas para até 3 pessoas"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy" decoding="async" width="400" height="300" />
@@ -502,7 +570,7 @@
           <!-- Econômico Casal -->
           <article class="reveal reveal-d1 group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
             <div class="aspect-[4/3] overflow-hidden bg-navy/10">
-              <img src="/assets/img/quartos/economico-casal.webp"
+              <img src="assets/img/quartos/AP-economico/_MG_9811-01.jpeg"
                    alt="Quarto Econômico Casal do Lagoa Park Hotel — cama de casal"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy" decoding="async" width="400" height="300" />
@@ -539,7 +607,7 @@
           <!-- Standard -->
           <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
             <div class="aspect-[4/3] overflow-hidden bg-navy/10">
-              <img src="/assets/img/quartos/standard.webp"
+              <img src="assets/img/quartos/AP-Standard-dbl/_MG_9869-01.jpeg"
                    alt="Quarto Standard do Lagoa Park Hotel — configuração flexível de camas para até 3 pessoas"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy" decoding="async" width="400" height="300" />
@@ -565,7 +633,7 @@
           <!-- Standard Casal -->
           <article class="reveal reveal-d1 group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
             <div class="aspect-[4/3] overflow-hidden bg-navy/10">
-              <img src="/assets/img/quartos/standard-casal.webp"
+              <img src="assets/img/quartos/AP-Standard-dbl/_MG_9869-01.jpeg"
                    alt="Quarto Standard Casal do Lagoa Park Hotel — cama de casal com frigobar"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy" decoding="async" width="400" height="300" />
@@ -602,7 +670,7 @@
           <!-- Confort -->
           <article class="reveal group bg-white rounded-sm overflow-hidden border border-border shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
             <div class="relative aspect-[4/3] overflow-hidden bg-navy/10">
-              <img src="/assets/img/quartos/confort.webp"
+              <img src="assets/img/quartos/AP-economico/_MG_9816-01.jpeg"
                    alt="Quarto Confort do Lagoa Park Hotel — recém-reformado, configuração flexível de camas"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy" decoding="async" width="400" height="300" />
@@ -629,7 +697,7 @@
           <!-- Confort Studio -->
           <article class="reveal reveal-d1 group bg-white rounded-sm overflow-hidden border border-terracota/25 shadow-sm hover:-translate-y-1 hover:shadow-md transition-all duration-200">
             <div class="relative aspect-[4/3] overflow-hidden bg-navy/10">
-              <img src="/assets/img/quartos/confort-studio.webp"
+              <img src="assets/img/quartos/AP-economico/_MG_9827-01.jpeg"
                    alt="Quarto Confort Studio do Lagoa Park Hotel — recém-reformado, mini copa e mesa de trabalho ampla"
                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                    loading="lazy" decoding="async" width="400" height="300" />
@@ -673,7 +741,7 @@
 
       <div class="text-center mb-16 reveal">
         <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-3">Localização</p>
-        <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-5xl font-light italic tracking-normal">No coração de João Pessoa</h2>
+        <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-[1.75rem] font-medium tracking-normal">No coração de João Pessoa</h2>
         <p class="text-muted text-sm mt-3">Parque Sólon de Lucena, 19 · Centro · João Pessoa – PB</p>
       </div>
 
@@ -757,7 +825,7 @@
 
       <div class="text-center mb-14 reveal">
         <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-3">O que dizem os hóspedes</p>
-        <h2 class="font-display text-offwhite text-3xl sm:text-4xl lg:text-5xl font-light italic tracking-normal">Quem ficou, voltou.</h2>
+        <h2 class="font-display text-offwhite text-3xl sm:text-4xl lg:text-[1.75rem] font-medium tracking-normal">Quem ficou, voltou.</h2>
         <div class="flex items-center justify-center gap-2 mt-4" aria-label="Avaliação geral: 4.7 de 5 no Google">
           <div class="flex gap-0.5" aria-hidden="true">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="#C0603A"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -836,7 +904,7 @@
   <section id="reservar" class="py-20 lg:py-28 bg-offwhite">
     <div class="max-w-xl mx-auto px-4 sm:px-6 text-center reveal">
       <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-4">Reserve agora</p>
-      <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-5xl font-light italic tracking-normal mb-4">
+      <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-[1.75rem] font-medium tracking-normal mb-4">
         Escolha bem onde ficar.
       </h2>
       <p class="text-muted text-base leading-relaxed mb-10">
@@ -908,13 +976,14 @@
       <div>
         <h4 class="text-offwhite text-xs font-medium tracking-[0.15em] uppercase mb-5">Navegação</h4>
         <ul class="space-y-3">
-          <li><a href="/quartos"  class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Quartos</a></li>
+          <li><a href="/quartos"     class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Quartos</a></li>
           <li><a href="#localizacao" class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Como Chegar</a></li>
-          <li><a href="/atracoes" class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Atrações</a></li>
-          <li><a href="/faq"      class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Dúvidas Frequentes</a></li>
-          <li><a href="/grupos"   class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Grupos e Eventos</a></li>
-          <li><a href="/blog"     class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Blog</a></li>
-          <li><a href="/contato"  class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Contato</a></li>
+          <li><a href="/atracoes"    class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Atrações</a></li>
+          <li><a href="galeria-360.html" class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Fotos 360º</a></li>
+          <li><a href="/faq"         class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Dúvidas Frequentes</a></li>
+          <li><a href="/grupos"      class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Grupos e Eventos</a></li>
+          <li><a href="/blog"        class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Blog</a></li>
+          <li><a href="/contato"     class="text-offwhite/55 hover:text-terracota text-sm transition-colors">Contato</a></li>
         </ul>
       </div>
 
@@ -1071,6 +1140,64 @@
     }
   }, { rootMargin: '300px' });
   mapObs.observe(mapEl);
+</script>
+
+<!-- ═══════════════════════════ CARROSSEL HERO ═════════════════════════ -->
+<script>
+(function() {
+  const carousel = document.getElementById('hero-carousel');
+  const slides = document.querySelectorAll('.hero-slide');
+  const indicators = document.querySelectorAll('.carousel-indicator');
+  let currentIndex = 0;
+  const totalSlides = slides.length;
+  const autoPlayInterval = 5000; // 5 segundos
+
+  // Função para mostrar um slide específico
+  function showSlide(index) {
+    // Remove active de todos
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      slide.style.opacity = i === index ? '1' : '0';
+      slide.style.zIndex = i === index ? '10' : '0';
+    });
+
+    // Atualiza indicadores
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === index);
+      indicator.style.backgroundColor = i === index ? 'rgba(245, 243, 238, 0.9)' : 'rgba(245, 243, 238, 0.4)';
+      indicator.style.width = i === index ? '32px' : '10px';
+    });
+
+    currentIndex = index;
+  }
+
+  // Auto-play
+  let autoPlayTimer = setInterval(() => {
+    showSlide((currentIndex + 1) % totalSlides);
+  }, autoPlayInterval);
+
+  // Pausa ao passar o mouse
+  carousel.addEventListener('mouseenter', () => clearInterval(autoPlayTimer));
+  carousel.addEventListener('mouseleave', () => {
+    autoPlayTimer = setInterval(() => {
+      showSlide((currentIndex + 1) % totalSlides);
+    }, autoPlayInterval);
+  });
+
+  // Cliques nos indicadores
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      clearInterval(autoPlayTimer);
+      showSlide(index);
+      autoPlayTimer = setInterval(() => {
+        showSlide((currentIndex + 1) % totalSlides);
+      }, autoPlayInterval);
+    });
+  });
+
+  // Inicializa o primeiro slide
+  showSlide(0);
+})();
 </script>
 
 </body>
