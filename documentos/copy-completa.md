@@ -811,9 +811,9 @@ Recém-reformado em março/2025. Perfeito para quem quer sentir em casa, mas com
 **Google Maps:** [Rota de carro](https://www.google.com/maps/dir/-7.1199157,-34.8817816/Praia+de+Tambaú,+João+Pessoa,+PB)
 
 **Copy:**
-> A praia mais popular de João Pessoa. Calçadão com quiosques, restaurantes, barracas de artesanato e movimento o dia todo. Mar com ondas suaves, boa para banho. A opção certa para quem quer praia com estrutura, agito e fácil acesso.
+> A praia mais popular de João Pessoa. O **Bulevar de Tambaú** concentra quiosques, restaurantes, barracas de artesanato e o famoso letreiro **EU ♥ JAMPA** — parada obrigatória para a foto da viagem. Mar com ondas suaves, boa para banho. A opção certa para quem quer praia com estrutura, agito e fácil acesso.
 
-**Ícones de destaque:** Calçadão · Quiosques · Artesanato · Ondas suaves
+**Ícones de destaque:** Bulevar · EU ♥ JAMPA · Quiosques · Artesanato · Ondas suaves
 
 ---
 
@@ -835,7 +835,7 @@ Recém-reformado em março/2025. Perfeito para quem quer sentir em casa, mas com
 **Google Maps:** [Rota de carro](https://www.google.com/maps/dir/-7.1199157,-34.8817816/Praia+do+Cabo+Branco,+João+Pessoa,+PB)
 
 **Copy:**
-> As falésias de arenito vermelho que emolduram Cabo Branco fazem desta uma das praias mais fotografadas da Paraíba. Frequentada por moradores locais — menos turística, mais tranquila. O Farol do Cabo Branco e a Estação Cabo Branco (Oscar Niemeyer) ficam nos arredores.
+> As falésias de arenito vermelho que emolduram Cabo Branco fazem desta uma das praias mais fotografadas da Paraíba. Frequentada por moradores locais — menos turística, mais tranquila. Nos arredores: o **Farol do Cabo Branco**, erguido sobre as falésias com vista para o Atlântico aberto, e a **Estação Ciência, Cultura e Artes**, obra monumental de Oscar Niemeyer que vale a visita independente da praia.
 
 **Ícones de destaque:** Falésias vermelhas · Mar tranquilo · Farol · Niemeyer
 
@@ -866,6 +866,50 @@ Recém-reformado em março/2025. Perfeito para quem quer sentir em casa, mas com
 > Fora do calendário religioso, a praia tem outro argumento irresistível: **alguns dos melhores restaurantes de frutos do mar de João Pessoa** ficam às margens desta praia, com mesas voltadas para o mar. E na maré baixa, os recifes formam **piscinas naturais cristalinas** perfeitas para banho. Praia da Ponta do Seixas — o ponto mais oriental das Américas — fica a poucos minutos daqui.
 
 **Ícones de destaque:** Escadaria da Penha · Procissão marítima · Frutos do mar · Piscinas naturais
+
+---
+
+### MARCOS ICÔNICOS NA ORLA
+
+> Além das praias, a costa de João Pessoa tem três pontos que toda viagem precisa incluir — independente de sol ou maré.
+
+---
+
+#### Marco 1 — BULEVAR DE TAMBAÚ / EU ♥ JAMPA
+**Distância:** ~7 km · ~13 min de carro  
+**Acesso:** A pé do estacionamento de Tambaú  
+**Google Maps:** [Rota de carro](https://www.google.com/maps/dir/-7.1199157,-34.8817816/Bulevar+de+Tambaú,+João+Pessoa,+PB)
+
+**Copy:**
+> O coração da orla de João Pessoa. O **Bulevar de Tambaú** é o calçadão mais movimentado da cidade — quiosques, artesanato, bares e o famoso letreiro **EU ♥ JAMPA**, que nenhum visitante resiste a fotografar. De dia ou de noite, o bulevar tem vida própria. A foto com o letreiro virou ritual de passagem para quem vem a João Pessoa.
+
+**Ícones de destaque:** Letreiro EU ♥ JAMPA · Calçadão · Quiosques · Ponto fotográfico
+
+---
+
+#### Marco 2 — FAROL DO CABO BRANCO
+**Distância:** ~13 km · ~20 min de carro  
+**Acesso:** De carro, a pé da Praia do Cabo Branco  
+**Google Maps:** [Rota de carro](https://www.google.com/maps/dir/-7.1199157,-34.8817816/Farol+do+Cabo+Branco,+João+Pessoa,+PB)
+
+**Copy:**
+> Erguido sobre as falésias de arenito vermelho com vista para o Atlântico aberto, o **Farol do Cabo Branco** é um dos cartões-postais mais fotografados de João Pessoa. Fica poucos minutos da Ponta do Seixas — o ponto mais oriental das Américas —, formando junto um roteiro de tarde inesquecível: farol, falésias e o oceano que começa aqui.
+
+**Ícones de destaque:** Farol histórico · Falésias · Vista para o Atlântico · Pôr do sol
+
+---
+
+#### Marco 3 — ESTAÇÃO CIÊNCIA, CULTURA E ARTES (NIEMEYER)
+**Distância:** ~13 km · ~18 min de carro  
+**Acesso:** De carro, próximo à Praia do Cabo Branco  
+**Google Maps:** [Rota de carro](https://www.google.com/maps/dir/-7.1199157,-34.8817816/Estação+Cabo+Branco,+João+Pessoa,+PB)
+
+**Copy:**
+> Um dos últimos grandes projetos de **Oscar Niemeyer** no Brasil — e talvez o mais ousado. A Estação Ciência, Cultura e Artes do Cabo Branco tem as curvas e a audácia características do arquiteto: uma estrutura cilíndrica suspensa sobre pilotis, com terraços abertos para o oceano e museus, exposições e espaços culturais por dentro.
+>
+> Mesmo quem não é fã de arquitetura para na porta. Quem entra, fica mais tempo do que planejava.
+
+**Ícones de destaque:** Oscar Niemeyer · Arquitetura icônica · Museus · Vista do oceano
 
 ---
 

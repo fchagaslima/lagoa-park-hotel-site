@@ -20,7 +20,8 @@
 | 5 | Roteiro a pé — ambiência | 3 fotos |
 | 6 | 7 Passeios — cards | 7 fotos (1 por passeio) |
 | 7 | 15 Praias — cards | 13 fotos novas + 2 reaproveitadas |
-| **TOTAL** | | **40 fotos obrigatórias** |
+| 8 | Marcos icônicos na orla | 3 fotos (Bulevar, Farol, Niemeyer) |
+| **TOTAL** | | **43 fotos obrigatórias** |
 
 > **Reaproveitamento:** ATRACAO-03 (Tambaú) e ATRACAO-05 (Cabo Branco) servem também para os cards de praias. As 13 fotos novas cobrem as praias que ainda não foram fotografadas.
 
@@ -736,9 +737,66 @@ A paisagem selvagem de Tambaba — falésias altas, mar aberto, natureza intacta
 
 ---
 
+## SEÇÃO 8 — MARCOS ICÔNICOS NA ORLA
+
+> Três pontos que todo visitante precisa incluir — independente de sol ou maré. Fotos com alto potencial de engajamento em redes sociais.
+
+---
+
+### FOTO ORLA-01 ⭐ — BULEVAR DE TAMBAÚ / EU ♥ JAMPA
+**Uso:** Card do marco "Bulevar de Tambaú" + uso potencial em redes sociais do hotel  
+**Formato:** 16:9 (panorâmica) e 4:3 (letreiro)
+
+**O que fotografar:**  
+O letreiro icônico **EU ♥ JAMPA** em destaque, com o bulevar ao fundo — pessoas, movimento, clima de orla.
+
+**Opções de ângulo:**
+- **Opção A (preferida — letreiro):** Câmera frontal ao letreiro, altura dos olhos, letreiro preenchendo ~40% do quadro, bulevar e oceano visíveis ao fundo. Luz da tarde para cores mais quentes. Pessoa(s) posando em frente — para dar escala e sensação de experiência vivida.
+- **Opção B (bulevar):** Do calçadão em perspectiva, câmera baixa (~60 cm do chão), mostrando a extensão do bulevar com o letreiro visível ao fundo, palmeiras laterais e céu aberto. Movimento de pedestres borrado (velocidade lenta de obturador).
+- **Opção C (extra — drone):** Vista aérea baixa do bulevar ao entardecer — o letreiro visível, o calçadão, o oceano ao fundo e as luzes do bairro começando a acender.
+
+**Horário ideal:** 16h–18h — luz dourada realça as cores do letreiro, movimento maior de pessoas.
+
+---
+
+### FOTO ORLA-02 ⭐ — FAROL DO CABO BRANCO
+**Uso:** Card do marco "Farol do Cabo Branco"  
+**Formato:** 16:9 ou 4:3 (vertical funciona bem para farol)
+
+**O que fotografar:**  
+O farol erguido sobre as falésias de arenito vermelho, com o Atlântico aberto ao fundo.
+
+**Opções de ângulo:**
+- **Opção A (preferida):** Da beira da falésia, câmera levemente de baixo para cima, farol centralizado no quadro, céu azul profundo acima e o oceano visível ao fundo. Luz da manhã iluminando a torre branca de frente.
+- **Opção B:** Da praia, câmera olhando para cima em direção à falésia, mostrando o contraste entre a areia, o arenito vermelho e o farol no topo. Perspectiva dramática.
+- **Opção C (drone):** Vista aérea (~30 m), mostrando o farol sobre a falésia, o corredor de falésias vermelhas e o oceano azul em 180°.
+
+**Horário ideal:** 8h–10h (luz frontal no farol, sem sombra dura). Alternativa: pôr do sol (17h30–18h) para silhueta do farol contra o céu alaranjado.
+
+---
+
+### FOTO ORLA-03 ⭐ — ESTAÇÃO CIÊNCIA, CULTURA E ARTES (NIEMEYER)
+**Uso:** Card do marco "Estação Ciência — Niemeyer"  
+**Formato:** 16:9
+
+**O que fotografar:**  
+A arquitetura monumental de Niemeyer — cilindro suspenso em pilotis, curvas brancas contra o céu, terraços abertos.
+
+**Opções de ângulo:**
+- **Opção A (preferida):** Da praça frontal, câmera levemente de baixo para cima, enquadrando toda a estrutura com o céu azul ao fundo. Lente grande angular (~16mm) para capturar a escala e as curvas. Sem pessoas em primeiro plano — deixar a arquitetura falar.
+- **Opção B:** Detalhe das curvas — câmera a 50mm focando na sobreposição dos volumes circulares, luz e sombra nas superfícies brancas.
+- **Opção C:** Do terraço, olhando para fora — janela em arco emoldurando o oceano ao fundo. Interior Niemeyer + paisagem = foto poderosa.
+
+**Horário ideal:** 9h–11h (luz da manhã nas superfícies brancas, sem reflexo excessivo). Céu azul sem nuvens é essencial.  
+**Observação:** Confirmar autorização para fotografar o interior com a administração da Estação.
+
+---
+
+---
+
 ## RESUMO GERAL — CHECKLIST DO FOTÓGRAFO
 
-### Fotos obrigatórias (35)
+### Fotos obrigatórias (43)
 
 **Bloco 1 — Hero e atrações gerais**
 
@@ -805,6 +863,14 @@ A paisagem selvagem de Tambaba — falésias altas, mar aberto, natureza intacta
 | PRAIA-12 | Praia de Cabedelo — orla local e quiosques | 16:9 | 9h–11h | Não |
 | PRAIA-13 | Praia Formosa — areia e mar calmo | 16:9 | 9h–11h | Não |
 
+**Bloco 6 — Marcos icônicos na orla**
+
+| Código | Descrição | Formato | Horário | Drone? |
+|--------|-----------|---------|---------|--------|
+| ORLA-01 ⭐ | Bulevar de Tambaú — letreiro EU ♥ JAMPA | 16:9 + 4:3 | 16h–18h | Opcional |
+| ORLA-02 ⭐ | Farol do Cabo Branco — sobre as falésias | 16:9 | 8h–10h | Opcional |
+| ORLA-03 ⭐ | Estação Ciência (Niemeyer) — arquitetura icônica | 16:9 | 9h–11h | Não |
+
 ---
 
 ### Fotos com drone — resumo de prioridades
@@ -819,6 +885,8 @@ A paisagem selvagem de Tambaba — falésias altas, mar aberto, natureza intacta
 | PRAIA-03 | Camboinha — extensão da praia | Opcional |
 | PRAIA-07 | Jacumã — Praia do Amor de cima | Opcional |
 | PRAIA-10 | Tambaba — falésias laterais | Opcional |
+| ORLA-01 | Bulevar de Tambaú ao entardecer | Opcional |
+| ORLA-02 | Farol do Cabo Branco sobre as falésias | Opcional |
 
 ---
 
