@@ -14,14 +14,15 @@
 | # | Seção | Qtd de fotos |
 |---|-------|-------------|
 | 1 | Hero da página (banner principal) | 1 foto |
-| 2 | 7 Atrações — cards | 7 fotos (1 por atração) |
+| 2 | 8 Atrações — cards | 8 fotos (1 por atração) |
+| 2B | Lucena — extensão do roteiro | 3 fotos (praia, Igreja da Guia, peixe-boi) |
 | 3 | Centro histórico — pontos tradicionais + igrejas | 5 fotos (pontos) + 1 foto (igrejas) |
 | 4 | Centro histórico — museus novos | 3 fotos (1 por museu, incl. TRE) |
 | 5 | Roteiro a pé — ambiência | 3 fotos |
 | 6 | 7 Passeios — cards | 7 fotos (1 por passeio) |
 | 7 | 15 Praias — cards | 13 fotos novas + 2 reaproveitadas |
 | 8 | Marcos icônicos na orla | 3 fotos (Bulevar, Farol, Niemeyer) |
-| **TOTAL** | | **43 fotos obrigatórias** |
+| **TOTAL** | | **47 fotos obrigatórias** |
 
 > **Reaproveitamento:** ATRACAO-03 (Tambaú) e ATRACAO-05 (Cabo Branco) servem também para os cards de praias. As 13 fotos novas cobrem as praias que ainda não foram fotografadas.
 
@@ -174,6 +175,80 @@ Dezenas de barcos reunidos no Rio Paraíba ao entardecer, com o céu colorido ao
 
 **Horário ideal:** Entre 17h e 18h — exatamente no momento do pôr do sol. A cena acontece diariamente.  
 **Atenção:** A foto do músico requer autorização prévia. Chegar no local com 30 minutos de antecedência para posicionamento.
+
+---
+
+### FOTO ATRACAO-08 ⭐ — FORTALEZA DE SANTA CATARINA
+**Uso:** Card da atração "Fortaleza de Santa Catarina — Cabedelo"  
+**Formato:** 16:9
+
+**O que fotografar:**  
+As muralhas e canhões da fortaleza colonial com o Rio Paraíba ou o Atlântico ao fundo — arquitetura militar do século XVII em estado de preservação impressionante.
+
+**Opções de ângulo:**
+- **Opção A (preferida):** Das ameias, câmera horizontal, um ou dois canhões em primeiro plano apontando para o oceano/rio, horizonte azul ao fundo. Composição clássica que resume poder histórico + paisagem.
+- **Opção B:** Fachada externa — câmera levemente de baixo para cima, centralizando o portal de entrada da fortaleza, muralhas de pedra nos dois lados, céu azul no topo. Lente grande angular.
+- **Opção C (drone):** Vista aérea (~50 m) mostrando a planta da fortaleza inteira — forma geométrica das muralhas, o pátio interno, o rio/oceano ao redor. Um dos ângulos mais impactantes para patrimônio histórico.
+
+**Horário ideal:** 9h–11h (luz da manhã nas fachadas de pedra, poucos visitantes).  
+**Observação:** Confirmar autorização para drone com a administração do monumento (tombado pelo IPHAN).
+
+---
+
+---
+
+## SEÇÃO 2B — LUCENA (EXTENSÃO DO ROTEIRO DE CABEDELO)
+
+> Fotos para o card da extensão "Lucena de balsa" — complemento do roteiro da Fortaleza de Santa Catarina.
+
+---
+
+### FOTO LUCENA-01 — PRAIA DE LUCENA
+**Uso:** Card da Praia de Lucena  
+**Formato:** 16:9
+
+**O que fotografar:**  
+Faixa de areia larga e calma, piscinas naturais na maré baixa, clima de praia pouco explorada.
+
+**Opções de ângulo:**
+- **Opção A (preferida):** Da beira d'água, câmera horizontal ao nível dos joelhos, piscinas naturais entre recifes em primeiro plano, oceano aberto e céu limpo ao fundo. Sem pessoas — transmitir sensação de praia vazia e descoberta.
+- **Opção B:** Do alto da areia seca, câmera em perspectiva mostrando a extensão da praia com algumas barracas simples ao fundo. Clima local e descontraído.
+- **Opção C:** Close de barco de pescador encalhado na areia com o mar ao fundo — elemento visual que remete ao cotidiano da comunidade.
+
+**Horário ideal:** 8h–10h (luz dourada, maré baixa para piscinas visíveis, poucas pessoas).
+
+---
+
+### FOTO LUCENA-02 ⭐ — IGREJA NOSSA SENHORA DA GUIA
+**Uso:** Card da Igreja da Guia + panorâmica de Lucena  
+**Formato:** 16:9 (paisagem) + 4:3 (fachada)
+
+**O que fotografar:**  
+A vista panorâmica do alto onde a Igreja da Guia está construída — oceano, foz do Rio Paraíba e litoral norte num único quadro.
+
+**Opções de ângulo:**
+- **Opção A (preferida — paisagem):** Das imediações da igreja, câmera horizontal mostrando o panorama de 180°: oceano à direita, foz do rio ao centro, praia e litoral ao fundo. Igreja visível na lateral do quadro como referência. Luz da manhã ideal.
+- **Opção B — fachada:** Câmera levemente de baixo para cima, enquadrando a fachada colonial branca da Igreja contra o céu azul. Arquitetura simples e elegante típica do interior do Nordeste.
+- **Opção C:** Da entrada da Igreja olhando para fora — o portal emoldura a vista panorâmica ao fundo. Composição que une patrimônio e paisagem num único clique.
+
+**Horário ideal:** 8h–11h (luz ilumina a fachada e o panorama de frente).
+
+---
+
+### FOTO LUCENA-03 — PROJETO PEIXE-BOI MARINHO
+**Uso:** Card do Projeto Peixe-Boi (se visita liberada)  
+**Formato:** 16:9 ou 4:3
+
+**O que fotografar:**  
+Peixe-boi em tanque de reabilitação ou visitante observando o animal — experiência de conservação.
+
+**Opções de ângulo:**
+- **Opção A:** Visitante (criança preferencialmente) observando o peixe-boi no tanque, câmera capturando o rosto do visitante de lado e o animal visível na água. Emoção da descoberta.
+- **Opção B:** Close no peixe-boi à superfície da água — fociar, olhos, textura da pele. Câmera rente à água, luz natural difusa.
+- **Opção C:** Placa ou sinalização do projeto com o animal ao fundo desfocado — identifica o local sem expor o animal em excesso.
+
+**Horário:** Conforme liberação do ICMBio — confirmar com o CMA Lucena antes da sessão.  
+**Observação:** Fotografar exclusivamente com autorização expressa do ICMBio/CMA. Não usar flash. Não entrar nas áreas restritas de reabilitação.
 
 ---
 
@@ -796,7 +871,7 @@ A arquitetura monumental de Niemeyer — cilindro suspenso em pilotis, curvas br
 
 ## RESUMO GERAL — CHECKLIST DO FOTÓGRAFO
 
-### Fotos obrigatórias (43)
+### Fotos obrigatórias (47)
 
 **Bloco 1 — Hero e atrações gerais**
 
@@ -810,6 +885,10 @@ A arquitetura monumental de Niemeyer — cilindro suspenso em pilotis, curvas br
 | ATRACAO-05 | Praia de Cabo Branco — falésias *(reaproveitada em praias)* | 16:9 | 8h–11h | Não |
 | ATRACAO-06 | Ponta do Seixas — marco geográfico | 16:9 | 6h–7h | Opcional |
 | ATRACAO-07 | Pôr do Sol do Jacaré — barcos e céu | 16:9 | 17h–18h | Não |
+| ATRACAO-08 ⭐ | Fortaleza de Santa Catarina — canhões e muralhas | 16:9 | 9h–11h | Opcional |
+| LUCENA-01 | Praia de Lucena — piscinas naturais e areia deserta | 16:9 | 8h–10h | Não |
+| LUCENA-02 ⭐ | Igreja da Guia — panorâmica de Lucena e foz do rio | 16:9 + 4:3 | 8h–11h | Não |
+| LUCENA-03 | Projeto Peixe-Boi — sujeito a autorização ICMBio | 16:9 | A combinar | Não |
 
 **Bloco 2 — Centro histórico e museus**
 
@@ -887,6 +966,7 @@ A arquitetura monumental de Niemeyer — cilindro suspenso em pilotis, curvas br
 | PRAIA-10 | Tambaba — falésias laterais | Opcional |
 | ORLA-01 | Bulevar de Tambaú ao entardecer | Opcional |
 | ORLA-02 | Farol do Cabo Branco sobre as falésias | Opcional |
+| ATRACAO-08 | Fortaleza de Santa Catarina — vista aérea das muralhas | Opcional |
 
 ---
 

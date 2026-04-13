@@ -784,6 +784,72 @@ Recém-reformado em março/2025. Perfeito para quem quer sentir em casa, mas com
 
 ---
 
+#### Atração 8 — FORTALEZA DE SANTA CATARINA
+**Distância:** ~22 km do hotel (município de Cabedelo)  
+**Acesso:** De carro, ~32 minutos  
+**Categoria:** Patrimônio histórico / arquitetura militar  
+**Endereço:** Av. Beira-Mar, s/n — Cabedelo  
+**Horário:** Ter–Dom: 8h–17h · **Fecha segunda**  
+**Entrada:** Gratuita  
+**Google Maps:** [Rota de carro](https://www.google.com/maps/dir/-7.1199157,-34.8817816/Fortaleza+de+Santa+Catarina,+Cabedelo,+PB)
+
+**Título do card:**
+> Fortaleza de Santa Catarina — Cabedelo
+
+**Descrição:**
+> Construída no século XVII para defender a entrada do Rio Paraíba dos invasores holandeses, a Fortaleza de Santa Catarina é um dos mais bem preservados exemplares de arquitetura militar colonial do Brasil. Canhões apontados para o oceano, muralhas de pedra e cal, vista da foz do rio e do Atlântico a partir das ameias — uma visita que vale tanto pela história quanto pela paisagem.
+>
+> Fica em Cabedelo, a mesmos 30 minutos que o Pôr do Sol do Jacaré. Os dois se encaixam perfeitamente no mesmo roteiro de tarde. E quem quiser ir além: do pier de Cabedelo sai a balsa para **Lucena** — uma travessia de minutos que abre um mundo diferente.
+
+---
+
+#### EXTENSÃO DO ROTEIRO — LUCENA DE BALSA
+
+> A balsa que sai do pier de Cabedelo leva menos de 10 minutos para atravessar o rio. Do outro lado está Lucena — um município pequeno, tranquilo, com praia deserta, uma das igrejas com melhor vista do litoral norte e um projeto de conservação que coloca você frente a frente com o peixe-boi marinho.
+
+---
+
+##### Praia de Lucena
+**Acesso:** Balsa de Cabedelo · ~10 min de travessia  
+**Tipo:** Praia calma, pouco explorada pelo turismo de massa  
+**Google Maps:** [Rota para Lucena](https://www.google.com/maps/dir/-7.1199157,-34.8817816/Lucena,+PB)
+
+**Copy:**
+> A praia de Lucena tem aquilo que as praias urbanas de João Pessoa deixaram de ter: silêncio, areia larga e a sensação de que você encontrou um segredo. Mar calmo com recifes que formam piscinas naturais na maré baixa. Estrutura simples — algumas barracas, frutos do mar frescos. A travessia de balsa já faz parte da experiência.
+
+**Ícones de destaque:** Praia deserta · Piscinas naturais · Frutos do mar · Balsa
+
+---
+
+##### Igreja Nossa Senhora da Guia
+**Localização:** Centro de Lucena, no alto do morro  
+**Horário:** Verificar com a recepção do hotel antes da visita  
+**Entrada:** Gratuita  
+**Google Maps:** [Igreja da Guia — Lucena](https://www.google.com/maps/search/Igreja+Nossa+Senhora+da+Guia+Lucena+PB)
+
+**Copy:**
+> A Igreja da Guia fica no ponto mais alto de Lucena — e a vista de lá de cima explica por que ela foi construída ali. O oceano, o Rio Paraíba, a foz e as praias do litoral norte se abrem num panorama de 180° que impressiona qualquer pessoa. A arquitetura colonial da igreja é singela, mas o que ela enquadra lá fora não tem preço.
+
+**Ícones de destaque:** Vista panorâmica · Igreja colonial · Mirante natural
+
+---
+
+##### Projeto Peixe-Boi Marinho
+**Localização:** Lucena — PB  
+**Gestão:** ICMBio — Centro de Mamíferos Aquáticos (CMA)  
+**Entrada:** Confirmar com a recepção do hotel antes de visitar  
+
+> ⚠️ **Atenção:** O projeto está sujeito a alterações de funcionamento e horário de visitação. A recepção do hotel confirma a situação atual antes da sua saída. **WhatsApp: (83) 3015-1414**
+
+**Copy:**
+> O **Projeto Peixe-Boi Marinho** do ICMBio em Lucena é um dos mais importantes programas de preservação do peixe-boi marinho no Brasil — um mamífero aquático ameaçado de extinção que vive no litoral nordestino. O centro resgata, reabilita e reintroduz animais no oceano, e em determinados períodos recebe visitantes para conhecer os animais de perto.
+>
+> Uma experiência rara — especialmente para crianças. A recepção do hotel orienta sobre a situação atual do projeto e como organizar a visita.
+
+**Ícones de destaque:** Peixe-boi marinho · ICMBio · Conservação · Crianças · Experiência única
+
+---
+
 ---
 
 ## SEÇÃO: PRAIAS DE JOÃO PESSOA E REGIÃO
