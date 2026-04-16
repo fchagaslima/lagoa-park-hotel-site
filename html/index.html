@@ -25,133 +25,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <!-- Fonte: Outfit -->
+  <!-- Fontes: Outfit (sans) + Playfair Display (display italic) -->
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CSS CDN (substituir por build compilado em produção) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            navy:      '#1B2F5E',
-            offwhite:  '#F5F3EE',
-            terracota: '#C0603A',
-            surface:   '#FAFAF8',
-            muted:     '#6B7280',
-            border:    '#E5E7EB',
-            text:      '#2D3748',
-            sand:      '#E8DDD0',
-          },
-          fontFamily: {
-            sans:    ['Outfit', 'system-ui', 'sans-serif'],
-            display: ['"Playfair Display"', 'Georgia', 'serif'],
-          },
-        },
-      },
-    };
-  </script>
-
-  <!-- CSS crítico inline -->
-  <style>
-    html { scroll-behavior: smooth; }
-
-    /* Hero overlay navy */
-    .hero-overlay {
-      background: linear-gradient(
-        to bottom,
-        rgba(27,47,94,0.55) 0%,
-        rgba(27,47,94,0.72) 100%
-      );
-    }
-
-    /* Scroll reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(16px);
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Reviews: swipe mobile */
-    .reviews-track {
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-      scrollbar-width: none;
-    }
-    .reviews-track::-webkit-scrollbar { display: none; }
-    .review-card { scroll-snap-align: start; }
-
-    /* Drawer */
-    #drawer          { transition: transform 0.25s ease; }
-    #drawer-overlay  { transition: opacity 0.2s ease; }
-
-    /* Mapa */
-    #map { z-index: 1; }
-
-    /* ── Design v2: Tipografia editorial ── */
-
-    /* Stagger delays para reveals encadeados */
-    .reveal-d1 { transition-delay:  80ms; }
-    .reveal-d2 { transition-delay: 160ms; }
-    .reveal-d3 { transition-delay: 240ms; }
-    .reveal-d4 { transition-delay: 320ms; }
-    .reveal-d5 { transition-delay: 400ms; }
-
-    /* Padrão de linhas diagonais sutis — textura editorial */
-    .texture-lines {
-      background-image: repeating-linear-gradient(
-        -45deg,
-        transparent,
-        transparent 5px,
-        rgba(27,47,94,0.018) 5px,
-        rgba(27,47,94,0.018) 6px
-      );
-    }
-
-    /* ── Carrossel Hero ── */
-    .hero-slide {
-      opacity: 0;
-      z-index: 0;
-      transition: opacity 0.7s ease-in-out;
-    }
-    .hero-slide.active {
-      opacity: 1;
-      z-index: 10;
-    }
-
-    /* Indicadores de slide */
-    .carousel-indicator {
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .carousel-indicator.active {
-      background-color: rgba(245, 243, 238, 0.9) !important;
-      width: 32px;
-    }
-    .carousel-indicator:not(.active) {
-      background-color: rgba(245, 243, 238, 0.4);
-      width: 10px;
-    }
-    .carousel-indicator:hover:not(.active) {
-      background-color: rgba(245, 243, 238, 0.6);
-    }
-
-    /* Responsividade: indicadores menores em mobile */
-    @media (max-width: 640px) {
-      .carousel-indicator {
-        width: 8px !important;
-        height: 8px !important;
-      }
-      .carousel-indicator.active {
-        width: 24px !important;
-      }
-    }
-  </style>
+  <!-- Tailwind v4 compilado localmente (gerado por tools/tailwindcss.exe) -->
+  <link rel="stylesheet" href="dist/styles.css" />
 
   <!-- Favicon (substituir pelos arquivos reais) -->
   <link rel="icon"             href="assets/img/logo/favicon.ico" />
@@ -201,7 +79,7 @@
   </script>
 </head>
 
-<body class="bg-offwhite font-sans text-text antialiased">
+<body class="bg-offwhite font-sans text-ink antialiased">
 
 <!-- ═══════════════════════════════════════════════ HEADER ══ -->
 <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-navy transition-shadow duration-200">
@@ -209,8 +87,13 @@
 
     <!-- Logo -->
     <a href="/" aria-label="Lagoa Park Hotel — Página inicial" class="flex-shrink-0">
-      <!-- SUBSTITUIR pela tag <img> do logo real quando disponível -->
-      <span class="text-offwhite font-semibold text-lg tracking-wide">Lagoa Park Hotel</span>
+      <img
+        src="assets/img/logo/LogoHorizontalInvertido.jpg"
+        alt="Lagoa Park Hotel"
+        height="36"
+        class="h-9 w-auto object-contain"
+        decoding="async"
+      />
     </a>
 
     <!-- Nav Desktop -->
@@ -315,88 +198,113 @@
     <!-- Overlay -->
     <div class="hero-overlay absolute inset-0" aria-hidden="true"></div>
 
-    <!-- Indicadores de Slides -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
-      <button class="carousel-indicator active w-2.5 h-2.5 rounded-full bg-offwhite/60 transition-all duration-300 hover:bg-offwhite" aria-label="Slide 1" data-index="0"></button>
-      <button class="carousel-indicator w-2.5 h-2.5 rounded-full bg-offwhite/60 transition-all duration-300 hover:bg-offwhite" aria-label="Slide 2" data-index="1"></button>
-      <button class="carousel-indicator w-2.5 h-2.5 rounded-full bg-offwhite/60 transition-all duration-300 hover:bg-offwhite" aria-label="Slide 3" data-index="2"></button>
+    <!-- Indicadores de Slides — hairlines precisas, canto direito -->
+    <div class="absolute bottom-6 right-6 sm:right-10 lg:right-16 z-20 flex items-center gap-3">
+      <span class="text-offwhite/40 text-[10px] tracking-[0.25em] uppercase mr-1 hidden sm:inline">Vista</span>
+      <button class="carousel-indicator active" aria-label="Slide 1" data-index="0"></button>
+      <button class="carousel-indicator" aria-label="Slide 2" data-index="1"></button>
+      <button class="carousel-indicator" aria-label="Slide 3" data-index="2"></button>
     </div>
 
-    <!-- Conteúdo -->
-    <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 pb-16">
-      <p class="text-offwhite/60 text-xs font-medium tracking-[0.25em] uppercase mb-5">João Pessoa · Paraíba · Brasil</p>
+    <!-- Conteúdo centrado -->
+    <div class="relative z-10 w-full max-w-3xl mx-auto px-5 sm:px-6 pb-20">
 
-      <h1 class="font-display text-offwhite text-5xl sm:text-6xl lg:text-[3.5rem] font-semibold leading-tight tracking-[-0.02em] mb-5">
-        No centro de João Pessoa.<br>Em frente à Lagoa.
+      <!-- Kicker com hairlines laterais: localização como âncora visual -->
+      <div class="flex items-center justify-center gap-4 mb-5 reveal">
+        <span class="h-px w-10 bg-offwhite/30" aria-hidden="true"></span>
+        <p class="text-offwhite/70 text-[10px] font-medium tracking-[0.32em] uppercase whitespace-nowrap">
+          João Pessoa · Paraíba · Brasil
+        </p>
+        <span class="h-px w-10 bg-offwhite/30" aria-hidden="true"></span>
+      </div>
+
+      <!-- Headline editorial: Playfair italic light + Outfit medium -->
+      <h1 class="text-offwhite leading-[1.05] tracking-[-0.015em] mb-5 reveal reveal-d1">
+        <span class="block font-display font-light italic text-[2.25rem] sm:text-5xl lg:text-6xl">
+          No centro de João Pessoa.
+        </span>
+        <span class="block font-sans font-medium text-[2.25rem] sm:text-5xl lg:text-6xl mt-1">
+          Em frente à Lagoa.
+        </span>
       </h1>
 
-      <p class="text-offwhite/75 text-base sm:text-lg font-light tracking-wide mb-10">
-        38 apartamentos · Wi-Fi 200 Mbps · Check-in às 14h
+      <!-- Subtítulo experiencial — fala de benefícios, não de specs -->
+      <p class="text-offwhite/65 text-xs sm:text-sm font-light tracking-[0.1em] uppercase mb-8 reveal reveal-d2">
+        Café da manhã incluso
+        <span class="inline-block w-1 h-1 rounded-full bg-offwhite/30 align-middle mx-3"></span>
+        Internet de alta velocidade
+        <span class="inline-block w-1 h-1 rounded-full bg-offwhite/30 align-middle mx-3"></span>
+        Check-in sem fricção
       </p>
 
-      <!-- Formulário de reserva -->
+      <!-- Formulário de reserva — barra hairline precisa, sem glass/blur -->
       <form id="form-reserva" novalidate
-            class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-sm p-4 sm:p-2
-                   flex flex-col sm:flex-row gap-3 sm:gap-0 sm:items-stretch max-w-2xl mx-auto">
+            class="max-w-2xl mx-auto bg-navy/55 border border-offwhite/15
+                   flex flex-col sm:flex-row sm:items-stretch overflow-hidden reveal reveal-d3">
 
-        <div class="flex-1 sm:border-r border-white/25 px-4 py-2">
-          <label for="checkin" class="block text-offwhite/55 text-[10px] font-medium tracking-widest uppercase mb-1">Check-in</label>
+        <div class="flex-1 sm:border-r border-offwhite/15 px-5 py-3.5 text-left">
+          <label for="checkin" class="block text-offwhite/45 text-[9px] font-medium tracking-[0.22em] uppercase mb-1">Check-in</label>
           <input type="date" id="checkin" name="checkin" required
-                 class="w-full bg-transparent text-offwhite text-sm focus:outline-none"
+                 class="w-full bg-transparent text-offwhite text-sm font-light focus:outline-none [color-scheme:dark]"
                  aria-label="Data de check-in" />
         </div>
 
-        <div class="flex-1 sm:border-r border-white/25 px-4 py-2">
-          <label for="checkout" class="block text-offwhite/55 text-[10px] font-medium tracking-widest uppercase mb-1">Check-out</label>
+        <div class="flex-1 sm:border-r border-offwhite/15 px-5 py-3.5 text-left">
+          <label for="checkout" class="block text-offwhite/45 text-[9px] font-medium tracking-[0.22em] uppercase mb-1">Check-out</label>
           <input type="date" id="checkout" name="checkout" required
-                 class="w-full bg-transparent text-offwhite text-sm focus:outline-none"
+                 class="w-full bg-transparent text-offwhite text-sm font-light focus:outline-none [color-scheme:dark]"
                  aria-label="Data de check-out" />
         </div>
 
-        <div class="flex-1 sm:border-r border-white/25 px-4 py-2">
-          <label for="adultos" class="block text-offwhite/55 text-[10px] font-medium tracking-widest uppercase mb-1">Adultos</label>
+        <div class="flex-1 sm:border-r border-offwhite/15 px-5 py-3.5 text-left">
+          <label for="adultos" class="block text-offwhite/45 text-[9px] font-medium tracking-[0.22em] uppercase mb-1">Hóspedes</label>
           <select id="adultos" name="adultos"
-                  class="w-full bg-transparent text-offwhite text-sm focus:outline-none appearance-none"
-                  aria-label="Número de adultos">
-            <option value="1" class="text-text bg-navy">1</option>
-            <option value="2" class="text-text bg-navy" selected>2</option>
-            <option value="3" class="text-text bg-navy">3</option>
-            <option value="4" class="text-text bg-navy">4+</option>
+                  class="w-full bg-transparent text-offwhite text-sm font-light focus:outline-none appearance-none cursor-pointer"
+                  aria-label="Número de hóspedes">
+            <option value="1" class="text-ink bg-offwhite">1 adulto</option>
+            <option value="2" class="text-ink bg-offwhite" selected>2 adultos</option>
+            <option value="3" class="text-ink bg-offwhite">3 adultos</option>
+            <option value="4" class="text-ink bg-offwhite">4 adultos</option>
           </select>
         </div>
 
         <button type="submit"
                 id="cta-reservar-hero" data-gtm-id="cta-reservar-hero"
-                class="sm:ml-2 flex-shrink-0 bg-terracota text-offwhite text-xs font-medium tracking-widest uppercase
-                       px-7 py-4 rounded-sm hover:bg-terracota/90 transition-colors whitespace-nowrap">
-          Ver disponibilidade
+                class="group flex-shrink-0 bg-terracota text-offwhite text-[11px] font-medium tracking-[0.18em] uppercase
+                       px-7 py-4 sm:py-0 hover:bg-terracota-deep transition-colors whitespace-nowrap
+                       inline-flex items-center justify-center gap-3">
+          <span>Ver disponibilidade</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+               stroke-linecap="round" stroke-linejoin="round"
+               class="transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+            <polyline points="12 5 19 12 12 19"/>
+          </svg>
         </button>
       </form>
-      <p id="form-error" role="alert" class="text-red-300 text-xs mt-2 hidden">
+      <p id="form-error" role="alert" class="text-terracota-soft text-[11px] tracking-wide mt-3 hidden text-center">
         Informe as datas de check-in e check-out.
       </p>
     </div>
 
-    <!-- Scroll cue -->
-    <div class="absolute bottom-7 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-offwhite/35" aria-hidden="true">
-      <span class="text-[10px] tracking-widest uppercase">Saiba mais</span>
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">
-        <polyline points="6 9 12 15 18 9"/>
-      </svg>
+    <!-- Scroll cue — apenas linha vertical fina + letra discreta -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-offwhite/30" aria-hidden="true">
+      <span class="text-[9px] tracking-[0.28em] uppercase">Explorar</span>
+      <span class="block w-px h-6 bg-offwhite/30"></span>
     </div>
   </section>
 
   <!-- ═══════════════════════════════════ NÚMEROS ══ -->
-  <div class="bg-navy border-t border-white/10 py-12 lg:py-16">
+  <div class="bg-navy border-t border-white/10 py-8 lg:py-10">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
         <div>
           <p class="font-display text-offwhite text-5xl lg:text-6xl font-light italic leading-none">38</p>
-          <p class="text-offwhite/40 text-[0.6rem] tracking-[0.22em] uppercase mt-3">apartamentos</p>
+          <p class="text-offwhite/40 text-[0.6rem] tracking-[0.22em] uppercase mt-3">quartos cuidados</p>
         </div>
         <div>
-          <p class="font-display text-offwhite text-5xl lg:text-6xl font-light italic leading-none">200</p>
-          <p class="text-offwhite/40 text-[0.6rem] tracking-[0.22em] uppercase mt-3">Mbps Wi-Fi</p>
+          <p class="font-display text-offwhite text-5xl lg:text-6xl font-light italic leading-none">24<span class="text-4xl lg:text-5xl">h</span></p>
+          <p class="text-offwhite/40 text-[0.6rem] tracking-[0.22em] uppercase mt-3">sempre tem alguém</p>
         </div>
         <div>
           <p class="font-display text-offwhite text-5xl lg:text-6xl font-light italic leading-none">30</p>
@@ -404,18 +312,18 @@
         </div>
         <div>
           <p class="font-display text-offwhite text-5xl lg:text-6xl font-light italic leading-none">14<span class="text-4xl lg:text-5xl">h</span></p>
-          <p class="text-offwhite/40 text-[0.6rem] tracking-[0.22em] uppercase mt-3">check-in</p>
+          <p class="text-offwhite/40 text-[0.6rem] tracking-[0.22em] uppercase mt-3">check-in sem pressa</p>
         </div>
       </div>
     </div>
   </div>
 
   <!-- ═══════════════════════════════════ DIFERENCIAIS ══ -->
-  <section id="diferenciais" class="py-20 lg:py-28 bg-offwhite texture-lines">
+  <section id="diferenciais" class="py-14 lg:py-20 bg-offwhite texture-lines">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <!-- Título editorial — alinhado à esquerda, misturando italic e peso forte -->
-      <div class="mb-14 reveal">
+      <div class="mb-10 reveal">
         <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-5xl font-light italic leading-snug">
           Tudo que você precisa.<br>
           <span class="not-italic font-semibold">Nada que você não pediu.</span>
@@ -457,8 +365,8 @@
               </svg>
             </div>
             <div>
-              <h3 class="text-navy text-sm font-medium mb-0.5">Wi-Fi 200 Mbps</h3>
-              <p class="text-muted text-xs leading-relaxed">Reunião por vídeo, trabalho remoto ou streaming — sem interrupção.</p>
+              <h3 class="text-navy text-sm font-medium mb-0.5">Internet de alta velocidade</h3>
+              <p class="text-muted text-xs leading-relaxed">Rede dimensionada para alto tráfego — reunião por vídeo, trabalho remoto ou streaming sem queda.</p>
             </div>
           </div>
 
@@ -525,16 +433,16 @@
   </section>
 
   <!-- ════════════════════════════════════ QUARTOS ══ -->
-  <section id="quartos" class="py-20 lg:py-28 bg-surface">
+  <section id="quartos" class="py-14 lg:py-20 bg-surface">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="text-center mb-16 reveal">
+      <div class="text-center mb-10 reveal">
         <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-3">Acomodações</p>
         <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-[1.75rem] font-medium tracking-normal">Escolha o seu apartamento</h2>
       </div>
 
       <!-- ── Linha Econômico ── -->
-      <div class="mb-14">
+      <div class="mb-10">
         <div class="flex items-center gap-4 mb-8 reveal">
           <span class="text-[0.6rem] font-medium tracking-[0.22em] uppercase text-muted whitespace-nowrap">Linha Econômico</span>
           <div class="flex-1 h-px bg-border"></div>
@@ -597,7 +505,7 @@
       </div>
 
       <!-- ── Linha Standard ── -->
-      <div class="mb-14">
+      <div class="mb-10">
         <div class="flex items-center gap-4 mb-8 reveal">
           <span class="text-[0.6rem] font-medium tracking-[0.22em] uppercase text-muted whitespace-nowrap">Linha Standard</span>
           <div class="flex-1 h-px bg-border"></div>
@@ -736,10 +644,10 @@
   </section>
 
   <!-- ══════════════════════════════ LOCALIZAÇÃO ══ -->
-  <section id="localizacao" class="py-20 lg:py-28 bg-offwhite">
+  <section id="localizacao" class="py-14 lg:py-20 bg-offwhite">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="text-center mb-16 reveal">
+      <div class="text-center mb-10 reveal">
         <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-3">Localização</p>
         <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-[1.75rem] font-medium tracking-normal">No coração de João Pessoa</h2>
         <p class="text-muted text-sm mt-3">Parque Sólon de Lucena, 19 · Centro · João Pessoa – PB</p>
@@ -820,10 +728,10 @@
   </section>
 
   <!-- ══════════════════════════════ AVALIAÇÕES ══ -->
-  <section id="avaliacoes" class="py-20 lg:py-28 bg-navy">
+  <section id="avaliacoes" class="py-14 lg:py-20 bg-navy">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-      <div class="text-center mb-14 reveal">
+      <div class="text-center mb-10 reveal">
         <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-3">O que dizem os hóspedes</p>
         <h2 class="font-display text-offwhite text-3xl sm:text-4xl lg:text-[1.75rem] font-medium tracking-normal">Quem ficou, voltou.</h2>
         <div class="flex items-center justify-center gap-2 mt-4" aria-label="Avaliação geral: 4.7 de 5 no Google">
@@ -901,7 +809,7 @@
   </section>
 
   <!-- ════════════════════════════════ CTA FINAL ══ -->
-  <section id="reservar" class="py-20 lg:py-28 bg-offwhite">
+  <section id="reservar" class="py-14 lg:py-20 bg-offwhite">
     <div class="max-w-xl mx-auto px-4 sm:px-6 text-center reveal">
       <p class="text-terracota text-xs font-medium tracking-[0.2em] uppercase mb-4">Reserve agora</p>
       <h2 class="font-display text-navy text-3xl sm:text-4xl lg:text-[1.75rem] font-medium tracking-normal mb-4">
@@ -1154,20 +1062,12 @@
 
   // Função para mostrar um slide específico
   function showSlide(index) {
-    // Remove active de todos
     slides.forEach((slide, i) => {
       slide.classList.toggle('active', i === index);
-      slide.style.opacity = i === index ? '1' : '0';
-      slide.style.zIndex = i === index ? '10' : '0';
     });
-
-    // Atualiza indicadores
     indicators.forEach((indicator, i) => {
       indicator.classList.toggle('active', i === index);
-      indicator.style.backgroundColor = i === index ? 'rgba(245, 243, 238, 0.9)' : 'rgba(245, 243, 238, 0.4)';
-      indicator.style.width = i === index ? '32px' : '10px';
     });
-
     currentIndex = index;
   }
 

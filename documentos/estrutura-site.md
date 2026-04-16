@@ -534,13 +534,7 @@ Foco Multimídia  Vê quartos → RESERVAR → Foco Multimídia
 
 ---
 
-## PRÓXIMAS ETAPAS
-
-- [ ] **Copy** — textos de todas as seções (headlines, subtítulos, diferenciais, FAQ, CTAs)
-- [ ] **Design** — identidade visual aplicada à estrutura (cores, tipografia, espaçamento)
-- [ ] **Código** — HTML + Tailwind CSS + HTMX
-
 ---
 
 *Documento interno — Projeto: lagoa-park-hotel-site*
-*Versão 1.0 · 08/04/2026*
+*Versão 1.0 · 08/04/2026 — Stack: HTML puro + CSS puro + JavaScript vanilla (sem frameworks)*

@@ -172,6 +172,19 @@ Acomodação premium para estadias prolongadas e viajantes corporativos. **Cama 
 
 ---
 
+### Comparação Rápida entre Categorias
+
+| Característica | Econômico | Standard | Confort | Confort Studio |
+|---|---|---|---|---|
+| **Camas flexíveis** | ✓ | ✓ | ✓ | — (apenas casal) |
+| **Frigobar** | — | ✓ | ✓ | ✓ |
+| **Poltrona** | — | — | — | ✓ |
+| **Mini copa** | — | — | — | ✓ |
+| **Recém-reformado** | — | — | ✓ | ✓ |
+| **Máximo 3 pessoas** | ✓ | ✓ | ✓ | — (máx 2) |
+
+---
+
 ## 6. KPIs Históricos (Dez/2024 – Fev/2026)
 
 | Mês | Receita Bruta | Ocupação | Diária Média |

@@ -389,29 +389,9 @@ A área de proteção ao redor do logo deve ser equivalente à altura da letra "
 
 Aplicar o mesmo princípio em seções do site: **generosidade de espaço = percepção de qualidade**.
 
-### Estrutura de Páginas Sugerida
+### Estrutura de Páginas
 
-#### Homepage
-1. **Hero** — foto da fachada ou da Lagoa, headline direto, CTA de reserva
-2. **Proposta de Valor** — 3 diferenciais objetivos (localização, design, preço justo)
-3. **Apartamentos** — cards das categorias com fotos e detalhes essenciais
-4. **Localização** — mapa + texto sobre o entorno (Lagoa, centro histórico, distâncias)
-5. **Avaliações** — seleção de reviews reais do Booking/TripAdvisor
-6. **CTA Final** — reserva com senso de urgência suave
-
-#### Apartamentos
-- Cards com foto principal, nome da categoria, metragem, comodidades e preço médio
-- CTA direto para reserva em cada card
-
-#### Localização
-- Página com protagonismo da Lagoa Sólon de Lucena
-- Distâncias para pontos turísticos, aeroporto, rodoviária
-- Mapa interativo
-
-#### Sobre
-- Breve história do hotel
-- Equipe (opcional)
-- Valores da marca (sem jargão)
+> Arquitetura completa, wireframes e interações em `documentos/estrutura-site.md`.
 
 ### Componentes Prioritários
 

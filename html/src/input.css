@@ -1,0 +1,320 @@
+@import "tailwindcss";
+
+/* ============================================================
+   LAGOA PARK HOTEL — Design Tokens (brand-system.md)
+   ============================================================ */
+
+@theme {
+  /* ---------- Cores Primárias (brand-system §5) ---------- */
+  --color-navy: #1B2F5E;
+  --color-navy-deep: #15244A;
+  --color-navy-soft: #2A4078;
+
+  --color-offwhite: #F5F3EE;        /* sand do brand, usado como "offwhite" no codigo atual */
+  --color-sand: #E8DDD0;            /* tom arenoso mais quente */
+  --color-surface: #FAFAF8;         /* fundo alternativo — cards, secoes */
+
+  --color-terracota: #C0603A;
+  --color-terracota-deep: #A54E2C;
+  --color-terracota-soft: #D17A55;
+
+  /* ---------- Cores de Suporte ---------- */
+  --color-ink: #2D3748;             /* texto principal (antes "text") */
+  --color-muted: #6B7280;           /* texto secundario / metadados */
+  --color-border: #E5E7EB;          /* bordas e divisores */
+
+  /* ---------- Tipografia ---------- */
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+
+  /* ---------- Escala tipografica (brand-system §6) ---------- */
+  --text-display: 3.5rem;           /* 56px — hero */
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 600;
+
+  --text-h1: 2.5rem;                /* 40px */
+  --text-h1--line-height: 1.1;
+  --text-h1--letter-spacing: -0.015em;
+  --text-h1--font-weight: 600;
+
+  --text-h2: 1.75rem;               /* 28px */
+  --text-h2--line-height: 1.2;
+  --text-h2--font-weight: 500;
+
+  --text-h3: 1.25rem;               /* 20px */
+  --text-h3--line-height: 1.3;
+  --text-h3--font-weight: 500;
+
+  --text-body-lg: 1.125rem;         /* 18px */
+  --text-body-lg--line-height: 1.7;
+
+  --text-body: 1rem;                /* 16px */
+  --text-body--line-height: 1.6;
+
+  --text-small: 0.875rem;           /* 14px */
+  --text-small--letter-spacing: 0.02em;
+
+  --text-label: 0.75rem;            /* 12px — uppercase, tracking amplo */
+  --text-label--letter-spacing: 0.08em;
+  --text-label--font-weight: 500;
+
+  /* ---------- Espaco base 8px (brand-system §10) ---------- */
+  --spacing: 0.5rem;                /* Tailwind v4 deriva spacing-1..n a partir daqui */
+
+  /* ---------- Raios (minimos — "nao arredondar demais") ---------- */
+  --radius-sm: 2px;
+  --radius: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+
+  /* ---------- Sombras discretas ---------- */
+  --shadow-soft: 0 1px 2px rgb(27 47 94 / 0.04), 0 2px 8px rgb(27 47 94 / 0.04);
+  --shadow-card: 0 1px 3px rgb(27 47 94 / 0.06), 0 8px 24px rgb(27 47 94 / 0.06);
+  --shadow-hover: 0 4px 12px rgb(27 47 94 / 0.08), 0 16px 40px rgb(27 47 94 / 0.10);
+
+  /* ---------- Easing da marca ---------- */
+  --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ============================================================
+   BASE — reset suave + tipografia global
+   ============================================================ */
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-offwhite);
+    color: var(--color-ink);
+    font-size: var(--text-body);
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  /* Headings — peso 500/600, nunca 700+ no nome do hotel (brand §6) */
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-navy);
+    letter-spacing: -0.01em;
+  }
+
+  /* Selecao */
+  ::selection {
+    background-color: var(--color-terracota);
+    color: var(--color-offwhite);
+  }
+
+  /* Foco acessivel */
+  :focus-visible {
+    outline: 2px solid var(--color-terracota);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* ============================================================
+   COMPONENTES DA MARCA
+   ============================================================ */
+
+@layer components {
+
+  /* ---------- Hero overlay navy (brand §10) ---------- */
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgb(27 47 94 / 0.55) 0%,
+      rgb(27 47 94 / 0.72) 100%
+    );
+  }
+
+  /* ---------- Textura sutil de linhas diagonais — feel editorial ---------- */
+  .texture-lines {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 5px,
+      rgb(27 47 94 / 0.018) 5px,
+      rgb(27 47 94 / 0.018) 6px
+    );
+  }
+
+  /* ---------- Label minusculo (uppercase, tracking amplo) ---------- */
+  .brand-label {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-terracota);
+  }
+
+  /* ---------- Botoes (brand-system §10) ---------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.875rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border-radius: var(--radius);
+    border: 1.5px solid transparent;
+    cursor: pointer;
+    transition: all 0.25s var(--ease-brand);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    background-color: var(--color-terracota);
+    color: var(--color-offwhite);
+  }
+  .btn-primary:hover {
+    background-color: var(--color-terracota-deep);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .btn-secondary {
+    background-color: transparent;
+    color: var(--color-navy);
+    border-color: var(--color-navy);
+  }
+  .btn-secondary:hover {
+    background-color: var(--color-navy);
+    color: var(--color-offwhite);
+  }
+
+  .btn-outline-light {
+    background-color: transparent;
+    color: var(--color-offwhite);
+    border-color: var(--color-offwhite);
+  }
+  .btn-outline-light:hover {
+    background-color: var(--color-offwhite);
+    color: var(--color-navy);
+  }
+
+  /* ---------- Hairline divider ---------- */
+  .hairline {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--color-border) 20%,
+      var(--color-border) 80%,
+      transparent
+    );
+  }
+}
+
+/* ============================================================
+   SCROLL REVEAL — animacao de entrada suave (brand §10)
+   Classe .reveal aparece via JS ao entrar no viewport.
+   ============================================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s var(--ease-brand), transform 0.6s var(--ease-brand);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-d1 { transition-delay:  80ms; }
+.reveal-d2 { transition-delay: 160ms; }
+.reveal-d3 { transition-delay: 240ms; }
+.reveal-d4 { transition-delay: 320ms; }
+.reveal-d5 { transition-delay: 400ms; }
+
+/* ============================================================
+   HERO CARROSSEL
+   ============================================================ */
+
+.hero-slide {
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+.hero-slide.active {
+  opacity: 1;
+  z-index: 10;
+}
+
+/* Indicadores como hairlines — precisos e editoriais */
+.carousel-indicator {
+  cursor: pointer;
+  display: inline-block;
+  height: 1px;
+  width: 18px;
+  background-color: rgb(245 243 238 / 0.35);
+  transition: width 0.35s var(--ease-brand), background-color 0.35s var(--ease-brand);
+  border: none;
+  padding: 0;
+}
+.carousel-indicator.active {
+  background-color: rgb(245 243 238 / 0.95);
+  width: 32px;
+}
+.carousel-indicator:hover:not(.active) {
+  background-color: rgb(245 243 238 / 0.65);
+}
+
+/* ============================================================
+   REVIEWS — swipe horizontal em mobile
+   ============================================================ */
+
+.reviews-track {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.reviews-track::-webkit-scrollbar { display: none; }
+.review-card { scroll-snap-align: start; }
+
+/* ============================================================
+   DRAWER MOBILE
+   ============================================================ */
+
+#drawer { transition: transform 0.25s ease; }
+#drawer-overlay { transition: opacity 0.2s ease; }
+
+/* ============================================================
+   MAPA
+   ============================================================ */
+
+#map { z-index: 1; }
+
+/* ============================================================
+   ANIMACOES — respeitar prefers-reduced-motion
+   ============================================================ */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up { animation: fadeInUp 0.8s var(--ease-brand) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+}
