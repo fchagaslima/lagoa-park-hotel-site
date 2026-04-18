@@ -41,7 +41,7 @@ Essas skills garantem qualidade profissional de copy e design. Nunca pular esse 
 1. **Sem frameworks JS** — HTML + Tailwind CSS + JS vanilla apenas. Estilos vao em `src/input.css`.
 2. **Design e copy:** consultar `documentos/brand-system.md` e `documentos/copy-completa.md`.
 3. **Pannellum:** carregar sempre localmente, nunca por CDN. Container `<div id="pannellum-viewer">` deve estar vazio (sem filhos).
-4. **Imagens:** caminhos relativos — `assets/img/nome.jpg`.
+4. **Imagens:** caminhos relativos — `assets/img/nome.jpg`. Antes de usar qualquer imagem, consultar `assets/img/CATALOGO-IMAGENS.md` para o nome correto, o caminho e os tamanhos esperados (desktop e mobile).
 5. **Sincronizar** `html/` e XAMPP ao editar arquivos HTML, CSS ou JS. Apos editar `src/input.css`, rodar `build.bat` antes de copiar para XAMPP.
 6. **Duvidas sobre o projeto:** consultar `PROJETO.md` (estrutura, pendencias, troubleshooting).
 

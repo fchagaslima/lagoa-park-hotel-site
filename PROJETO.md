@@ -40,6 +40,7 @@ Modelo: Home one-page + páginas complementares (galeria-360, grupos).
 | `documentos/roteiro-centro-historico-joao-pessoa.md` | Pesquisa histórica do Centro Histórico — fonte para copy da página `/atracoes` e blog |
 | `documentos/analise-site-atual.md` | ⚠️ Legado — diagnóstico do site antigo (WordPress/Omnibees). Consultar apenas para referência histórica. |
 | `html/README.md` | XAMPP, carrossel, configurações técnicas |
+| `assets/img/CATALOGO-IMAGENS.md` | Catálogo completo de imagens — nomes, caminhos, tamanhos (desktop e mobile) e status de todas as 113 imagens do site |
 
 ---
 
