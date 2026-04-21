@@ -2,6 +2,9 @@
 # Executavel oficial (~123MB) — baixar separadamente via dev.bat
 html/tools/tailwindcss.exe
 
+# ===== Documentos internos (somente local) =====
+PROJETO.md
+
 # ===== Backups locais =====
 html/styles.old.css
 html/*.bak
