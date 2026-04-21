@@ -44,6 +44,14 @@ Essas skills garantem qualidade profissional de copy e design. Nunca pular esse 
 4. **Imagens:** caminhos relativos — `assets/img/nome.jpg`. Antes de usar qualquer imagem, consultar `assets/img/CATALOGO-IMAGENS.md` para o nome correto, o caminho e os tamanhos esperados (desktop e mobile).
 5. **Sincronizar** `html/` e XAMPP ao editar arquivos HTML, CSS ou JS. Apos editar `src/input.css`, rodar `build.bat` antes de copiar para XAMPP.
 6. **Duvidas sobre o projeto:** consultar `PROJETO.md` (estrutura, pendencias, troubleshooting).
+7. **Atualizar `README.md`** sempre que ocorrer qualquer uma das situacoes abaixo:
+   - Nova pagina HTML criada ou removida → atualizar secao "Paginas"
+   - Nova biblioteca ou ferramenta adicionada → atualizar secao "Stack Tecnologica"
+   - Nova pasta criada em `html/` ou `assets/` → atualizar secao "Estrutura de Pastas"
+   - Item do Checklist Pre-Deploy concluido → marcar com `[x]`
+   - Configuracao critica resolvida (motor de reservas, GA4, SSL) → atualizar secao "Configuracoes Criticas"
+   - Novo documento adicionado em `documentos/` → atualizar secao "Documentacao"
+   - Data de ultima atualizacao sempre que o README for editado
 
 ---
 

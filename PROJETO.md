@@ -1,7 +1,11 @@
 # Lagoa Park Hotel — Site Oficial
 
-**Última atualização:** 16 de abril de 2026
+**Última atualização:** 21 de abril de 2026
 **Status:** ✅ Design completo — aguardando imagens reais e motor de reservas
+
+---
+
+> **Regra deste arquivo:** toda ação concluída no projeto deve ser registrada aqui — arquivos criados, pastas criadas, configurações feitas, itens do checklist marcados. Este é o documento de referência do que já foi feito e do que ainda falta.
 
 ---
 
@@ -33,14 +37,17 @@ Modelo: Home one-page + páginas complementares (galeria-360, grupos).
 | `documentos/estrutura-site.md` | Sitemap, wireframes, interações por seção |
 | `documentos/copy-completa.md` | Textos oficiais de todas as seções |
 | `documentos/galeria-360.md` | Galeria 360°: fotos, status, como adicionar |
-| `documentos/reputacao-online.md` | Avaliações reais de hóspedes (OTAs) |
-| `documentos/analise-concorrentes.md` | Padrões de estrutura e funil de conversão |
-| `documentos/lagoa_park_hotel_dossier.md` | Informações gerais do hotel |
-| `documentos/briefing-fotografico-atracoes.md` | Briefing para o fotógrafo — 47 fotos da página `/atracoes` com ângulos e especificações técnicas |
-| `documentos/roteiro-centro-historico-joao-pessoa.md` | Pesquisa histórica do Centro Histórico — fonte para copy da página `/atracoes` e blog |
 | `documentos/analise-site-atual.md` | ⚠️ Legado — diagnóstico do site antigo (WordPress/Omnibees). Consultar apenas para referência histórica. |
 | `html/README.md` | XAMPP, carrossel, configurações técnicas |
 | `assets/img/CATALOGO-IMAGENS.md` | Catálogo completo de imagens — nomes, caminhos, tamanhos (desktop e mobile) e status de todas as 113 imagens do site |
+
+> **Documentos confidenciais movidos** — os seguintes arquivos foram transferidos para `lagoa-park-hotel/` (repositório privado) por conterem dados sensíveis do negócio:
+>
+> - `lagoa_park_hotel_dossier.md` → `gerencia/lagoa_park_hotel_dossier.md`
+> - `reputacao-online.md` → `marketing/reputacao-online.md`
+> - `analise-concorrentes.md` → `marketing/analise-concorrentes.md`
+> - `briefing-fotografico-atracoes.md` → `marketing/briefing-fotografico-atracoes.md`
+> - `roteiro-centro-historico-joao-pessoa.md` → `marketing/roteiro-centro-historico-joao-pessoa.md`
 
 ---
 
@@ -82,3 +89,41 @@ Placeholder em `script.js` → função `abrirReservas()`.
 - [ ] Validar HTML: validator.w3.org
 - [ ] Testar performance: pagespeed.web.dev
 - [ ] Configurar SSL/HTTPS no servidor
+
+---
+
+## Histórico de Execução
+
+> Registro cronológico de tudo que foi feito no projeto. Atualizar sempre que uma ação for concluída.
+
+### 21 de abril de 2026
+
+#### README.md atualizado
+
+- ✅ `README.md` reescrito com boas práticas do GitHub — seções: Sobre, Páginas, Stack, Estrutura de Pastas, Como Desenvolver, Configurações Críticas, Checklist Pré-Deploy, Documentação e Contato
+- ✅ `.markdownlint.json` criado na raiz — configura estilo de tabelas como `consistent` para evitar erros de linting
+- ✅ `CLAUDE.md` — adicionada Regra 7: instrução para manter `README.md` atualizado a cada alteração relevante no projeto
+
+#### Ícones gerados
+
+- ✅ `assets/img/logo/favicon.ico` — gerado a partir de `0270x0270 - LogoHotelQuadrada.png` (tamanhos 16×16, 32×32 e 48×48 embutidos)
+- ✅ `assets/img/logo/apple-touch-icon.png` — gerado a partir do mesmo logo (180×180 px)
+- Ferramenta: Python 3.14 + Pillow
+
+#### Estrutura de pastas de imagens criada
+
+- ✅ `assets/img/home/`
+- ✅ `assets/img/faq/`
+- ✅ `assets/img/grupos/`
+- ✅ `assets/img/blog/`
+- ✅ `assets/img/contato/`
+- ✅ `assets/img/restaurante/`
+- ✅ `assets/img/quartos/economico/`
+- ✅ `assets/img/quartos/standard/`
+- ✅ `assets/img/quartos/standard-dbl/`
+- ✅ `assets/img/quartos/confort/`
+
+### 16 de abril de 2026
+
+- ✅ Design completo concluído
+- ✅ Catálogo de imagens criado — `assets/img/CATALOGO-IMAGENS.md` (113 imagens mapeadas)
