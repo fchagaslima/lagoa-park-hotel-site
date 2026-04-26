@@ -3,23 +3,29 @@
    Interações e funcionalidades
    ======================================== */
 
-// ── Abrir Motor de Reservas ──
+// ── Abrir Reservas via WhatsApp ──
+// Substituir pela URL do motor de reservas quando o channel manager estiver ativo
 function abrirReservas() {
   const checkin = document.getElementById('checkin')?.value;
   const checkout = document.getElementById('checkout')?.value;
-  const hospedes = document.getElementById('hospedes')?.value || '2';
-  const quartos = document.getElementById('quartos')?.value || '1';
+  const hospedes = document.getElementById('adultos')?.value || '2';
+  const formErro = document.getElementById('form-error');
 
   if (!checkin || !checkout) {
-    alert('Por favor, preencha as datas de check-in e check-out.');
+    if (formErro) {
+      formErro.classList.remove('hidden');
+      setTimeout(() => formErro.classList.add('hidden'), 4000);
+    }
     return;
   }
 
-  // URL do motor de reservas Foco Multimídia
-  // (Substituir pela URL real quando disponível)
-  const urlReservas = `https://book.seuhotel.com?check_in=${checkin}&check_out=${checkout}&adults=${hospedes}&rooms=${quartos}`;
+  if (formErro) formErro.classList.add('hidden');
 
-  window.open(urlReservas, '_blank');
+  const [anoIn, mesIn, diaIn] = checkin.split('-');
+  const [anoOut, mesOut, diaOut] = checkout.split('-');
+  const msg = `Olá! Gostaria de verificar disponibilidade no Lagoa Park Hotel.\nCheck-in: ${diaIn}/${mesIn}/${anoIn}\nCheck-out: ${diaOut}/${mesOut}/${anoOut}\nHóspedes: ${hospedes} adulto(s)`;
+
+  window.open(`https://wa.me/558330151414?text=${encodeURIComponent(msg)}`, '_blank');
 }
 
 // ── Toggle FAQ ──
@@ -112,6 +118,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     }
   });
+});
+
+// ── Capturar submit do formulário de reserva ──
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('form-reserva');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      abrirReservas();
+    });
+  }
 });
 
 // ── Validar formulário de datas ──

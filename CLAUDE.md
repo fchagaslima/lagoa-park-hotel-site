@@ -4,6 +4,12 @@ Instrucoes especificas para este projeto. Para contexto completo, ler `PROJETO.m
 
 ---
 
+## Raiz Web
+
+A pasta `html/` é a raiz pública do site (equivalente ao `public/` em frameworks como React/Next.js). Arquivos servidos diretamente pelo servidor ficam em `html/` — ex.: `html/index.html`, `html/llms.txt`.
+
+---
+
 ## Stack
 
 HTML puro + **Tailwind CSS v4** (CLI standalone) + JavaScript vanilla. **Sem frameworks JS** — sem React, sem HTMX.
@@ -39,7 +45,7 @@ Essas skills garantem qualidade profissional de copy e design. Nunca pular esse 
 ## Regras
 
 1. **Sem frameworks JS** — HTML + Tailwind CSS + JS vanilla apenas. Estilos vao em `src/input.css`.
-2. **Design e copy:** consultar `documentos/brand-system.md` e `documentos/copy-completa.md`.
+2. **Design de marca** (cores, tipografia, tom, logo): consultar `../lagoa-park-hotel/marketing/DESIGN.md` — fonte única da verdade, dono é o Marketing. **Implementação técnica** (espaçamento, botões, breakpoints, animações): consultar `DESIGN.md` neste projeto. **Copy:** consultar `documentos/copy-completa.md`.
 3. **Pannellum:** carregar sempre localmente, nunca por CDN. Container `<div id="pannellum-viewer">` deve estar vazio (sem filhos).
 4. **Imagens:** caminhos relativos — `assets/img/nome.jpg`. Antes de usar qualquer imagem, consultar `assets/img/CATALOGO-IMAGENS.md` para o nome correto, o caminho e os tamanhos esperados (desktop e mobile).
 5. **Sincronizar** `html/` e XAMPP ao editar arquivos HTML, CSS ou JS. Apos editar `src/input.css`, rodar `build.bat` antes de copiar para XAMPP.

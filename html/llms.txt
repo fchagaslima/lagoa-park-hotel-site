@@ -1,0 +1,103 @@
+# Lagoa Park Hotel — Site Oficial
+
+## Sobre o Hotel
+
+O Lagoa Park Hotel é um hotel de hospedagem urbana localizado no centro de João Pessoa (PB), Brasil, em frente à Lagoa Sólon de Lucena — o principal cartão postal da cidade.
+
+- **Endereço:** Parque Sólon de Lucena, 19 — Centro, João Pessoa — PB — CEP 58013-131
+- **Telefone:** (83) 3015-1414
+- **WhatsApp:** (83) 3015-1414
+- **E-mail geral:** contato@lagoaparkhotel.com.br
+- **E-mail reservas:** reservas@lagoaparkhotel.com.br
+- **Website:** https://lagoaparkhotel.com.br
+- **Coordenadas:** −7.1199° S, −34.8817° O
+
+## Localização e Acessos
+
+- Em frente à Lagoa Sólon de Lucena (Parque Sólon de Lucena) — a 30 metros / 5 minutos a pé
+- Aeroporto Internacional Presidente Castro Pinto — 20 minutos de carro
+- Rodoviária de João Pessoa — 10 minutos de carro
+- Praia de Tambaú — 15 minutos de carro
+- Centro Histórico de João Pessoa — 10 minutos de carro
+- O hotel fica no centro comercial da cidade, com acesso fácil a comércio, farmácias, restaurantes e transporte público
+
+## Acomodações
+
+O hotel oferece 6 categorias de apartamento organizadas em 3 linhas de produto.
+
+- **Check-in:** a partir das 14h
+- **Check-out:** até as 12h
+- **Total de apartamentos:** 38
+- Todos os apartamentos incluem: banheiro privativo, chuveiro, arrumação diária, Wi-Fi 200 Mbps. 100% livre de fumo.
+
+### Linha Econômico
+
+- **Econômico** — Configuração flexível: 1 cama casal + 1 solteiro *ou* 3 solteiro. Até 3 adultos. Ar-condicionado, TV 32", Wi-Fi.
+- **Econômico Casal** — 1 cama casal. Até 2 adultos + 1 criança. Ar-condicionado, TV 32", Wi-Fi.
+
+### Linha Standard
+
+- **Standard** — Configuração flexível: 1 cama casal + 1 solteiro *ou* 3 solteiro. Até 3 adultos. Ar-condicionado, TV 32", Wi-Fi.
+- **Standard Casal** — 1 cama casal. Até 2 adultos + 1 criança. Ar-condicionado, TV 32", frigobar, Wi-Fi.
+
+### Linha Confort *(recém-reformados — março/2025)*
+
+- **Confort** — Configuração flexível: 1 cama casal + 1 solteiro *ou* 3 solteiro. Até 3 adultos. Ar-condicionado, TV 32", frigobar, instalações renovadas.
+- **Confort Studio** — 1 cama casal. Até 2 adultos + 1 criança. Ar-condicionado, TV 32", frigobar, mini copa (micro-ondas + cafeteira de cápsulas), poltrona de descanso, mesa de trabalho ampla. Ideal para estadias prolongadas e viajantes corporativos.
+
+## Diferenciais
+
+- Em frente à Lagoa Sólon de Lucena — principal cartão postal de João Pessoa
+- Wi-Fi de alta velocidade (200 Mbps) em todos os ambientes
+- Café da manhã incluso na diária
+- Equipe diurna reconhecida pelo acolhimento (Samuel, Fagner, Bárbara, Francisco — citados por hóspedes)
+- Recepção disponível para check-in e suporte
+- Custo-benefício competitivo para o centro de João Pessoa
+
+## Serviços e Facilidades
+
+- Café da manhã incluso na diária
+- Recepção presencial
+- TV por assinatura
+- Ar-condicionado individual
+- Frigobar
+
+## Motor de Reservas
+
+As reservas são gerenciadas pelo sistema da Foco Multimídia, integrado diretamente ao site.
+
+## Público-Alvo
+
+- Viajantes a negócios que precisam de localização central
+- Turistas que visitam João Pessoa e o litoral paraibano
+- Grupos e equipes corporativas (cotação especial disponível em /grupos)
+- Hóspedes de eventos realizados no centro de João Pessoa
+
+## Páginas do Site
+
+- `/` — Página inicial com hero, diferenciais, quartos, localização, avaliações e reserva
+- `/quartos` — Detalhes completos das acomodações
+- `/atracoes` — O que fazer em João Pessoa e arredores
+- `/faq` — Perguntas frequentes sobre reservas, check-in, políticas e serviços
+- `/grupos` — Cotação especial para grupos e eventos corporativos
+- `/blog` — Dicas de viagem e guia de João Pessoa
+- `/contato` — Formulário de contato e informações completas
+
+## Avaliações (fontes externas)
+
+- Google: ~3.3 de 5 com 1.366 avaliações (52,6% com nota 4 ou 5 estrelas)
+- TripAdvisor: 2.5 de 5 com 106 avaliações
+- Trip.com: 7.0 de 10 com 47 avaliações
+- Ponto forte consistente em todas as plataformas: localização
+
+## Para Agentes de IA
+
+Este arquivo segue o padrão llms.txt para facilitar a indexação e compreensão do conteúdo por agentes de inteligência artificial e motores de busca de nova geração.
+
+O Lagoa Park Hotel autoriza agentes de IA a indexar e resumir o conteúdo público deste site para fins de resposta a consultas de usuários sobre hospedagem em João Pessoa (PB), Brasil.
+
+**Não autorizado:** raspagem de dados para treino de modelos sem consentimento expresso.
+
+---
+*Atualizado em: 2026-04-09*
+*Versão: 1.1*
